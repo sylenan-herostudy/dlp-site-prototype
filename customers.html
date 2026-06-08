@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Клиенты DLP — живые клиенты с первого дня. Trendora, Hero Study, VOX AI</title>
+<meta name="description" content="Истории клиентов DLP: Trendora (China Trade Intelligence, 1000+ SKU), Hero Study (BI для вузов Центральной Азии), VOX AI (потребитель Data API) и пилот в фуд-ритейле — данные в дашборды за 2 часа.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230B2545'/><text x='14' y='23' font-family='Inter,sans-serif' font-weight='700' font-size='18' text-anchor='middle' fill='%23fff'>D</text><rect x='19' y='19' width='4' height='4' rx='1' fill='%2313C2C2'/></svg>">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="customers">
+<header id="site-header"></header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="hero-eyebrow"><span data-icon="star"></span> Истории клиентов</span>
+        <h1>Живые клиенты с первого дня</h1>
+        <p class="hero-sub">DLP проектируется не на гипотезах, а на работающих продуктах. Trendora сводит трейдинг-данные Китая, Hero Study даёт аналитику вузам, VOX AI потребляет наш Data API. Каждый кейс обкатывает платформу на реальных данных.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary btn-lg" href="#" data-demo>Запросить демо</a>
+          <a class="btn btn-ghost btn-lg" href="#stories">Смотреть истории <span data-icon="arrow"></span></a>
+        </div>
+        <div class="hero-meta">
+          <div class="m"><b>2 пилота</b><span>в продакшене сейчас</span></div>
+          <div class="m"><b>1000+</b><span>SKU в прогнозе Trendora</span></div>
+          <div class="m"><b>2 часа</b><span>до первого дашборда</span></div>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="dash">
+          <div class="dash-bar"><i></i><i></i><i></i><span class="t">dlp · клиенты-тенанты</span><span class="live">LIVE</span></div>
+          <div class="panel-bar" style="border:0;padding:0;margin:0 0 14px"></div>
+          <div class="feed">
+            <div class="l"><span class="dot"></span> Trendora · e-commerce <span class="v">1000+ SKU</span></div>
+            <div class="l"><span class="dot"></span> Hero Study · образование <span class="v">live-BI</span></div>
+            <div class="l"><span class="dot"></span> VOX AI · потребитель API <span class="v amber">Data API</span></div>
+            <div class="l"><span class="dot"></span> Пилот в фуд-ритейле · PoC <span class="v">2 часа</span></div>
+          </div>
+          <div class="dash-foot"><span>// тенантов изолировано: 4</span><span>cross-tenant: 0</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAND -->
+<section class="section section--navy">
+  <div class="container">
+    <div class="stats-band">
+      <div class="stat reveal"><span class="num">2 пилота</span><span class="label">Trendora и Hero Study в продакшене с дня 1</span>
+        <svg class="spark" viewBox="0 0 72 22"><path d="M2 18L14 14 26 16 38 8 50 10 62 4 70 6"/></svg></div>
+      <div class="stat reveal"><span class="num amber">1000+</span><span class="label">SKU в прогнозе спроса Trendora China Trade</span></div>
+      <div class="stat reveal"><span class="num">BI для вузов ЦА</span><span class="label">Hero Study: аналитика ректоратам и министерствам</span>
+        <svg class="spark" viewBox="0 0 72 22"><path d="M2 16L14 12 26 14 38 9 50 11 62 5 70 7"/></svg></div>
+      <div class="stat reveal"><span class="num">2 часа</span><span class="label">пилот в фуд-ритейле: 30 логинов → live-дашборды</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- STORIES -->
+<section class="section" id="stories">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Кейсы</p>
+      <h2>Три клиента — три модели использования DLP</h2>
+      <p>От прогноза спроса в трейдинге до BI для образования и интеграции через Data API. Каждый тенант изолирован: per-tenant Fernet, row-level security, отдельные RAG-коллекции.</p>
+    </div>
+
+    <!-- Trendora -->
+    <article class="card pad-lg reveal" id="trendora" style="margin-bottom:24px">
+      <div class="client-lockup"><img src="assets/logos/trendora.svg" alt="Trendora"></div>
+      <h3>China Trade Intelligence для e-commerce</h3>
+      <p>Trendora сводит четыре эксклюзивных источника — таможню Китая, маркетплейсы, соцсети и открытые данные — в единый прогноз спроса на 1000+ SKU. AI-комитет закупок ранжирует товары по тренду и сезонности до того, как спрос дойдёт до Центральной Азии.</p>
+      <ul class="tab-list" style="margin:18px 0 4px">
+        <li><span data-icon="check"></span> 4 источника: таможня Китая, маркетплейсы, TikTok/Instagram, открытые данные</li>
+        <li><span data-icon="check"></span> Прогноз спроса на 1000+ SKU в bronze → silver → gold</li>
+        <li><span data-icon="check"></span> AI-комитет закупок: ранжирование по тренду и сезонности</li>
+      </ul>
+      <blockquote style="margin:18px 0 0;color:var(--dlp-muted)">«DLP сводит таможню Китая, соцсети и маркетплейсы в один прогноз спроса на 1000+ SKU. Тренды видны за год до того, как они доходят до Центральной Азии.»</blockquote>
+      <div class="quote-author"><div class="avatar-mono cyan">T</div><div class="who"><b>Команда Trendora</b><span>China Trade Intelligence · e-commerce</span></div></div>
+      <a class="btn-link" href="solutions.html#ecommerce" style="margin-top:18px">Решение для e-commerce и торговли <span data-icon="arrow"></span></a>
+    </article>
+
+    <!-- Hero Study -->
+    <article class="card pad-lg reveal" id="hero" style="margin-bottom:24px">
+      <div class="client-lockup"><img src="assets/logos/hero-study.png" alt="Hero Study"></div>
+      <h3>BI для вузов и министерств Центральной Азии</h3>
+      <p>Hero Study даёт ректоратам и министерствам образования live-аналитику по успеваемости, посещаемости и финансам вузов. То, что раньше собиралось неделями вручную в Excel, теперь обновляется в реальном времени из LMS/ERP-данных.</p>
+      <ul class="tab-list" style="margin:18px 0 4px">
+        <li><span data-icon="check"></span> Источник: LMS/ERP-данные университетов Казахстана, Узбекистана, Азербайджана</li>
+        <li><span data-icon="check"></span> Дашборды по успеваемости, посещаемости и финансам вузов</li>
+        <li><span data-icon="check"></span> Аналитика для ректоратов и министерств в одном окне</li>
+      </ul>
+      <blockquote style="margin:18px 0 0;color:var(--dlp-muted)">«Ректораты и министерства получают live-аналитику по успеваемости, посещаемости и финансам вузов. Раньше это были недели ручной сборки Excel’ей.»</blockquote>
+      <div class="quote-author"><div class="avatar-mono">HS</div><div class="who"><b>Команда Hero Study</b><span>BI для вузов · образование</span></div></div>
+      <a class="btn-link" href="solutions.html#education" style="margin-top:18px">Решение для образования и вузов <span data-icon="arrow"></span></a>
+    </article>
+
+    <!-- VOX AI -->
+    <article class="card pad-lg reveal" id="vox">
+      <div class="client-lockup"><span class="client-wm">VOX<span class="ai">AI</span></span></div>
+      <h3>Потребитель Data API и балансировка LLM Router</h3>
+      <p>VOX AI — AI-ассистент для CEO — обращается к DLP через Data API: чат-запрос превращается в обращение к gold-витринам и возвращается готовым дашбордом. LLM Router DLP балансирует эти запросы между Claude Sonnet 4.6, Opus 4.7 и локальным Ollama qwen с cost-cap на токены.</p>
+      <ul class="tab-list" style="margin:18px 0 4px">
+        <li><span data-icon="check"></span> Запросы к gold-витринам через Data API, scoped по тенанту</li>
+        <li><span data-icon="check"></span> Балансировка LLM Router: Sonnet 4.6 / Opus 4.7 / Ollama qwen</li>
+        <li><span data-icon="check"></span> Cost-cap на токены и аудит обращений к API</li>
+      </ul>
+      <blockquote style="margin:18px 0 0;color:var(--dlp-muted)">«Чат с пользователем уходит в Data API DLP и возвращается живым дашбордом за секунды. LLM Router снимает с нас балансировку провайдеров и контроль стоимости.»</blockquote>
+      <div class="quote-author"><div class="avatar-mono ghost">VX</div><div class="who"><b>Команда VOX AI</b><span>AI-ассистент для CEO · потребитель Data API</span></div></div>
+      <a class="btn-link" href="platform.html#data-api" style="margin-top:18px">Подробнее о Data API <span data-icon="arrow"></span></a>
+    </article>
+  </div>
+</section>
+
+<!-- TESTIMONIALS CAROUSEL -->
+<section class="section section--soft">
+  <div class="container">
+    <div class="section-head center">
+      <p class="eyebrow">Отзывы</p>
+      <h2>Что говорят клиенты и пилоты</h2>
+    </div>
+    <div class="carousel" data-carousel>
+      <div class="carousel-window">
+        <div class="carousel-track">
+          <div class="quote-slide">
+            <div class="client-lockup"><img src="assets/logos/trendora.svg" alt="Trendora"></div>
+            <div>
+              <blockquote>«DLP сводит таможню Китая, соцсети и маркетплейсы в один прогноз спроса на 1000+ SKU. Тренды видны за год до того, как они доходят до Центральной Азии.»</blockquote>
+              <div class="quote-author"><div class="avatar-mono cyan">T</div><div class="who"><b>Команда Trendora</b><span>China Trade Intelligence · e-commerce</span></div></div>
+            </div>
+          </div>
+          <div class="quote-slide">
+            <div class="client-lockup"><img src="assets/logos/hero-study.png" alt="Hero Study"></div>
+            <div>
+              <blockquote>«Ректораты и министерства получают live-аналитику по успеваемости, посещаемости и финансам вузов. Раньше это были недели ручной сборки Excel’ей.»</blockquote>
+              <div class="quote-author"><div class="avatar-mono">HS</div><div class="who"><b>Команда Hero Study</b><span>BI для вузов · образование</span></div></div>
+            </div>
+          </div>
+          <div class="quote-slide">
+            <div class="logo-chip muted">Пилотный клиент · фуд-ритейл</div>
+            <div>
+              <blockquote>«30 документов и логинов превратились в живые дашборды за пару часов. Не пришлось нанимать дата-инженера или ждать консалтинг месяц.»</blockquote>
+              <div class="quote-author"><div class="avatar-mono ghost">ПК</div><div class="who"><b>Пилотный клиент</b><span>фуд-ритейл · PoC</span></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-ctrls">
+        <button class="carousel-arrow prev" aria-label="Назад"><span data-icon="arrow" style="transform:rotate(180deg)"></span></button>
+        <button class="carousel-arrow next" aria-label="Вперёд"><span data-icon="arrow"></span></button>
+        <div class="carousel-dots"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ECOSYSTEM + WHY LINKS -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Шире контекста</p>
+      <h2>Экосистема и почему выбирают DLP</h2>
+    </div>
+    <div class="card-grid card-grid--2">
+      <a class="content-card reveal" href="company.html#ecosystem">
+        <div class="thumb v2"><span class="kicker">Экосистема</span><span class="title">Trendora, Hero Study и VOX AI как клиенты-инвесторы</span></div>
+        <div class="content-body"><span class="meta">// обзор · экосистема</span><span class="btn-link">Смотреть экосистему <span data-icon="arrow"></span></span></div>
+      </a>
+      <a class="content-card reveal" href="why.html">
+        <div class="thumb v3"><span class="kicker">Почему DLP</span><span class="title">Полная вертикаль данных против набора инструментов</span></div>
+        <div class="content-body"><span class="meta">// разбор · почему DLP</span><span class="btn-link">Почему выбирают DLP <span data-icon="arrow"></span></span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section--tight" id="cta">
+  <div class="container">
+    <div class="cta-band">
+      <div class="hero-glow"></div>
+      <h2>Станьте следующим кейсом DLP</h2>
+      <p>Покажем на ваших источниках, как DLP собирает live-дашборды и AI-инсайты за 2 часа — как у Trendora и Hero Study.</p>
+      <div class="actions">
+        <a class="btn btn-primary btn-lg" href="#" data-demo>Запросить демо</a>
+        <a class="btn btn-ghost btn-lg" href="ai-data-engineer.html">AI Data Engineer <span data-icon="arrow"></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="site-footer" class="site-footer"></footer>
+<script src="assets/site.js"></script>
+<script src="assets/ui.js"></script>
+</body>
+</html>

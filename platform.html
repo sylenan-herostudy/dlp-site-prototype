@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Платформа DLP — единая платформа данных и AI от источника до инсайта</title>
+<meta name="description" content="Единая платформа DLP: 350+ коннекторов Ingestion, Lakehouse на Apache Iceberg (bronze→silver→gold) и AI-BI с LLM Router. Один слой от источника данных до дашборда. Открытый стек, Zero Cross-Tenant.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230B2545'/><text x='14' y='23' font-family='Inter,sans-serif' font-weight='700' font-size='18' text-anchor='middle' fill='%23fff'>D</text><rect x='19' y='19' width='4' height='4' rx='1' fill='%2313C2C2'/></svg>">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="platform">
+<header id="site-header"></header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="hero-eyebrow"><span data-icon="layers"></span> Единая платформа данных и AI</span>
+        <h1>Единая платформа данных и AI</h1>
+        <p class="hero-sub">Один слой от источника данных до AI-инсайта. Подключаете источники — получаете очищенные данные, готовые витрины и дашборды по промту. Без склейки десяти инструментов и без дата-инженера.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary btn-lg" href="#" data-demo>Запросить демо</a>
+          <a class="btn btn-ghost btn-lg" href="ai-data-engineer.html">AI Data Engineer <span data-icon="arrow"></span></a>
+        </div>
+        <div class="hero-meta">
+          <div class="m"><b>3 слоя</b><span>Ingestion → Storage → AI-BI</span></div>
+          <div class="m"><b>350+</b><span>коннекторов и парсеров</span></div>
+          <div class="m"><b>2 API</b><span>Data API и Management API</span></div>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="dash">
+          <div class="dash-bar"><i></i><i></i><i></i><span class="t">dlp · слои платформы</span><span class="live">LIVE</span></div>
+          <div class="dash-kpis">
+            <div class="dash-kpi"><div class="k">Источники</div><div class="v">14</div><div class="d">+3</div></div>
+            <div class="dash-kpi"><div class="k">Витрины gold</div><div class="v">38</div><div class="d">+6</div></div>
+            <div class="dash-kpi"><div class="k">Latency API</div><div class="v">41 мс</div><div class="d amber">p95</div></div>
+          </div>
+          <div class="dash-chart">
+            <div class="b" style="height:38%"></div><div class="b" style="height:52%"></div>
+            <div class="b" style="height:60%"></div><div class="b" style="height:48%"></div>
+            <div class="b" style="height:72%"></div><div class="b amber" style="height:90%"></div>
+            <div class="b" style="height:68%"></div><div class="b" style="height:84%"></div>
+          </div>
+          <div class="dash-foot"><span>// bronze → silver → gold</span><span>обновлено 2 мин назад</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ТРИ ОПОРЫ -->
+<section class="section" id="open-source">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Три опоры платформы</p>
+      <h2>Единая, открытая, масштабируемая</h2>
+      <p>DLP проектируется как один связный слой, а не набор инструментов. Стек — открытый, без vendor lock-in. Архитектура — multi-tenant с первого дня.</p>
+    </div>
+    <div class="benefits">
+      <div class="benefit reveal">
+        <div class="ico-box navy"><span data-icon="layers"></span></div>
+        <h3>Единая</h3>
+        <p>Один слой от источника до инсайта: Ingestion собирает данные, Lakehouse чистит и версионирует, AI-BI отвечает на вопросы. Между слоями нет ручной склейки и экспорта-импорта между системами.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="ico-box"><span data-icon="globe"></span></div>
+        <h3>Открытая</h3>
+        <p>Фундамент на open-source: Airbyte для коннекторов, Apache Iceberg для хранения, PostgreSQL для агрегатов. Никакого vendor lock-in — данные остаются в вашем S3 в открытых форматах. Глубокий AI-слой — наш собственный код поверх открытого стека.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="ico-box"><span data-icon="database"></span></div>
+        <h3>Масштабируемая</h3>
+        <p>Per-tenant шардинг данных, изоляция и multi-region. Каждый клиент — отдельный тенант со своими источниками, витринами и ключами шифрования. Платформа рассчитана на рост от первого пилота до десятков тенантов.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- АРХИТЕКТУРА -->
+<section class="section section--soft">
+  <div class="container">
+    <div class="section-head center">
+      <p class="eyebrow">Архитектура</p>
+      <h2>Три слоя, один поток данных</h2>
+      <p>Данные поднимаются снизу вверх: сырые источники, очистка и витрины, ответы на вопросы естественным языком.</p>
+    </div>
+    <div class="arch-diagram reveal"><svg viewBox="0 0 880 470" role="img" aria-label="Трёхслойная архитектура DLP">
+<defs><marker id="arr" markerWidth="10" markerHeight="10" refX="5" refY="2" orient="auto"><path d="M0 0l5 2-5 2" fill="none" stroke="#13C2C2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<text x="2" y="84" font-family="JetBrains Mono" font-size="12.5" fill="#0E9C9C">// слой 03</text>
+<text x="2" y="248" font-family="JetBrains Mono" font-size="12.5" fill="#0E9C9C">// слой 02</text>
+<text x="2" y="412" font-family="JetBrains Mono" font-size="12.5" fill="#0E9C9C">// слой 01</text>
+<rect x="110" y="24" width="760" height="104" rx="14" fill="#0B2545"/>
+<text x="134" y="62" font-family="Inter" font-weight="600" font-size="19" fill="#fff">AI-BI · LLM Router</text>
+<text x="134" y="88" font-family="JetBrains Mono" font-size="12.5" fill="rgba(255,255,255,.6)">промт → дашборд за секунды</text>
+<rect x="560" y="46" width="86" height="30" rx="15" fill="none" stroke="#13C2C2" stroke-width="1.3"/><text x="603" y="65" text-anchor="middle" font-family="JetBrains Mono" font-size="12" fill="#13C2C2">Claude</text>
+<rect x="654" y="46" width="74" height="30" rx="15" fill="none" stroke="#13C2C2" stroke-width="1.3"/><text x="691" y="65" text-anchor="middle" font-family="JetBrains Mono" font-size="12" fill="#13C2C2">Opus</text>
+<rect x="736" y="46" width="84" height="30" rx="15" fill="none" stroke="#13C2C2" stroke-width="1.3"/><text x="778" y="65" text-anchor="middle" font-family="JetBrains Mono" font-size="12" fill="#13C2C2">Ollama</text>
+<line x1="490" y1="176" x2="490" y2="132" stroke="#13C2C2" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="110" y="176" width="760" height="128" rx="14" fill="#0B2545"/>
+<text x="134" y="212" font-family="Inter" font-weight="600" font-size="19" fill="#fff">Storage · Lakehouse</text>
+<text x="134" y="237" font-family="JetBrains Mono" font-size="12.5" fill="rgba(255,255,255,.6)">Apache Iceberg · S3 · PostgreSQL</text>
+<rect x="134" y="256" width="224" height="32" rx="8" fill="rgba(255,197,61,.22)"/><text x="246" y="277" text-anchor="middle" font-family="JetBrains Mono" font-size="12" fill="#FFC53D">bronze · raw</text>
+<rect x="370" y="256" width="224" height="32" rx="8" fill="rgba(255,255,255,.12)"/><text x="482" y="277" text-anchor="middle" font-family="JetBrains Mono" font-size="12" fill="#fff">silver · clean</text>
+<rect x="606" y="256" width="228" height="32" rx="8" fill="#13C2C2"/><text x="720" y="277" text-anchor="middle" font-family="JetBrains Mono" font-size="12" fill="#0B2545">gold · ready</text>
+<line x1="490" y1="352" x2="490" y2="308" stroke="#13C2C2" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="110" y="352" width="760" height="104" rx="14" fill="#0B2545"/>
+<text x="134" y="390" font-family="Inter" font-weight="600" font-size="19" fill="#fff">Ingestion · 350+ источников</text>
+<text x="134" y="415" font-family="JetBrains Mono" font-size="12.5" fill="rgba(255,255,255,.6)">Airbyte + кастом-парсеры</text>
+<rect x="500" y="392" width="82" height="28" rx="8" fill="rgba(19,194,194,.16)"/><text x="541" y="410" text-anchor="middle" font-family="JetBrains Mono" font-size="11" fill="#13C2C2">1С / CRM</text>
+<rect x="590" y="392" width="110" height="28" rx="8" fill="rgba(19,194,194,.16)"/><text x="645" y="410" text-anchor="middle" font-family="JetBrains Mono" font-size="11" fill="#13C2C2">маркетплейсы</text>
+<rect x="708" y="392" width="64" height="28" rx="8" fill="rgba(19,194,194,.16)"/><text x="740" y="410" text-anchor="middle" font-family="JetBrains Mono" font-size="11" fill="#13C2C2">банки</text>
+<rect x="780" y="392" width="64" height="28" rx="8" fill="rgba(19,194,194,.16)"/><text x="812" y="410" text-anchor="middle" font-family="JetBrains Mono" font-size="11" fill="#13C2C2">файлы</text>
+</svg></div>
+
+    <div class="layers">
+      <div class="layer reveal" id="ingestion">
+        <div class="ln">// слой 01<br>Ingestion</div>
+        <div>
+          <h3>Сбор из 350+ источников</h3>
+          <p>Airbyte с 350+ коннекторами плюс собственные парсеры под рынок СНГ и Китая: таможня Китая, маркетплейсы, TikTok, Instagram, Facebook, Google Trends, Yandex, Baidu, открытые данные ЦБ. Подключаются CRM, 1С, базы и файлы любого формата. Каждый заход источника журналируется — видно, что и когда обновлялось.</p>
+        </div>
+      </div>
+      <div class="layer reveal" id="storage">
+        <div class="ln">// слой 02<br>Storage</div>
+        <div>
+          <h3>Lakehouse: bronze → silver → gold</h3>
+          <p>Apache Iceberg плюс S3 для данных и PostgreSQL для агрегатов. Три уровня качества: bronze — сырые данные как есть, silver — очищенные и согласованные, gold — готовые витрины для дашбордов и API. Полная история версий данных: можно вернуться к любому состоянию и понять, откуда взялась каждая цифра.</p>
+        </div>
+      </div>
+      <div class="layer reveal" id="ai-bi">
+        <div class="ln">// слой 03<br>AI-BI</div>
+        <div>
+          <h3>AI-BI: промт → дашборд</h3>
+          <p>LLM Router балансирует запросы между Claude Sonnet 4.6, Opus 4.7 и локальным Ollama qwen — по типу запроса, стоимости и приватному режиму. Вы спрашиваете естественным языком, например «маржа по SKU за квартал», и получаете график. On-prem Ollama обслуживает тенантов, которым нельзя отдавать данные третьим сторонам.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ВОЗМОЖНОСТИ -->
+<section class="section section--soft">
+  <div class="container">
+    <div class="section-head center">
+      <p class="eyebrow">Возможности</p>
+      <h2>Что входит в платформу</h2>
+    </div>
+    <div class="card-grid card-grid--4">
+      <article class="card reveal" id="ai-data-engineer">
+        <div class="ico-box navy"><span data-icon="spark"></span></div>
+        <h3>AI Data Engineer</h3>
+        <p>Логин-пароль или файлы — система сама обнаруживает схему, строит пайплайн и собирает дашборды. Без дата-инженера и без недель на интеграцию.</p>
+        <a class="btn-link" href="ai-data-engineer.html">Открыть <span data-icon="arrow"></span></a>
+      </article>
+      <article class="card reveal" id="data-api">
+        <div class="ico-box"><span data-icon="code"></span></div>
+        <h3>Data API</h3>
+        <p>Запросы к витринам gold-слоя из ваших приложений: Vox, Trendora, Hero и внешние. Каждый запрос привязан к тенанту, латентность p95 — десятки миллисекунд.</p>
+        <a class="btn-link" href="resources.html#docs">Документация <span data-icon="arrow"></span></a>
+      </article>
+      <article class="card reveal" id="management-api">
+        <div class="ico-box"><span data-icon="cog"></span></div>
+        <h3>Management API</h3>
+        <p>Администрирование платформы: тенанты, источники, ключи, аудит. Заводите клиента, подключаете источники и отслеживаете доступы программно.</p>
+        <a class="btn-link" href="resources.html#docs">Документация <span data-icon="arrow"></span></a>
+      </article>
+      <article class="card reveal" id="security">
+        <div class="ico-box"><span data-icon="lock"></span></div>
+        <h3>Zero Cross-Tenant</h3>
+        <p>Каждый клиент изолирован: per-tenant Fernet-шифрование токенов, row-level security во всех таблицах, отдельные RAG-коллекции. Даже разработчики DLP не видят ваши данные.</p>
+        <a class="btn-link" href="platform.html#open-source">Подробнее <span data-icon="arrow"></span></a>
+      </article>
+      <article class="card reveal" id="observability">
+        <div class="ico-box"><span data-icon="gauge"></span></div>
+        <h3>Observability</h3>
+        <p>Метрики, логи и трейсы пайплайнов через Prometheus, Grafana и ELK. Видно состояние синхронизаций, нагрузку LLM Router и расход DLP-credits в реальном времени.</p>
+        <a class="btn-link" href="resources.html#docs">Подробнее <span data-icon="arrow"></span></a>
+      </article>
+      <article class="card reveal">
+        <div class="ico-box"><span data-icon="plug"></span></div>
+        <h3>Коннекторы и парсеры</h3>
+        <p>350+ коннекторов Airbyte плюс кастом-парсеры: таможня Китая, маркетплейсы, соцсети, Google Trends, Yandex, Baidu, открытые данные ЦБ.</p>
+        <a class="btn-link" href="platform.html#ingestion">К слою Ingestion <span data-icon="arrow"></span></a>
+      </article>
+      <article class="card reveal">
+        <div class="ico-box"><span data-icon="database"></span></div>
+        <h3>Data Lakehouse</h3>
+        <p>Iceberg, S3 и PostgreSQL с уровнями bronze, silver и gold. Полное версионирование данных и прозрачное происхождение каждой витрины.</p>
+        <a class="btn-link" href="platform.html#storage">К слою Storage <span data-icon="arrow"></span></a>
+      </article>
+      <article class="card reveal">
+        <div class="ico-box"><span data-icon="chartBar"></span></div>
+        <h3>AI-BI · LLM Router</h3>
+        <p>Промт превращается в дашборд. Маршрутизация между Claude Sonnet 4.6, Opus 4.7 и Ollama qwen с балансировкой нагрузки и cost-cap на токены.</p>
+        <a class="btn-link" href="platform.html#ai-bi">К слою AI-BI <span data-icon="arrow"></span></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ПОД КАПОТОМ -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Под капотом каждого слоя</p>
+      <h2>Как работают три слоя на практике</h2>
+      <p>Переключайтесь между слоями — справа видно состояние реального потока данных: синхронизации, уровни хранения и работа LLM Router.</p>
+    </div>
+    <div data-tabs>
+      <div class="tab-rail">
+        <button class="tab on" data-tab="t-ingestion"><span data-icon="plug"></span> Сбор</button>
+        <button class="tab" data-tab="t-storage"><span data-icon="database"></span> Хранение</button>
+        <button class="tab" data-tab="t-aibi"><span data-icon="chartBar"></span> AI-BI</button>
+      </div>
+
+      <div class="tab-panel on" data-panel="t-ingestion">
+        <div class="tab-copy">
+          <h3>Сбор: коннекторы и парсеры в одном окне</h3>
+          <p>Подключаете источники по логину или ключу, а DLP синхронизирует их по расписанию. Кастом-парсеры закрывают то, чего нет в стандартных коннекторах.</p>
+          <ul class="tab-list">
+            <li><span data-icon="check"></span> 350+ коннекторов Airbyte: CRM, 1С, базы, маркетплейсы</li>
+            <li><span data-icon="check"></span> Парсеры: таможня Китая, TikTok, Instagram, Google Trends</li>
+            <li><span data-icon="check"></span> Журналирование каждого захода источника</li>
+          </ul>
+          <a class="btn-link" href="platform.html#ingestion">Подробнее о слое Ingestion <span data-icon="arrow"></span></a>
+        </div>
+        <div class="panel">
+          <div class="panel-bar"><i></i><i></i><i></i><span class="t">ingestion · коннекторы</span><span class="live">синк</span></div>
+          <div class="feed">
+            <div class="l"><span class="dot"></span> 1С: Бухгалтерия <span class="v">синхронизировано</span></div>
+            <div class="l"><span class="dot"></span> Wildberries API <span class="v">синхронизировано</span></div>
+            <div class="l"><span class="dot"></span> Таможня Китая <span class="v amber">парсинг 64%</span></div>
+            <div class="l"><span class="dot"></span> Google Trends <span class="v">синхронизировано</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" data-panel="t-storage">
+        <div class="tab-copy">
+          <h3>Хранение: три уровня качества данных</h3>
+          <p>Сырые данные оседают в bronze, очищаются в silver и собираются в gold-витрины. История версий позволяет вернуться к любому состоянию и проследить происхождение цифры.</p>
+          <ul class="tab-list">
+            <li><span data-icon="check"></span> bronze — сырые данные как есть</li>
+            <li><span data-icon="check"></span> silver — очищенные и согласованные</li>
+            <li><span data-icon="check"></span> gold — готовые витрины для дашбордов и API</li>
+          </ul>
+          <a class="btn-link" href="platform.html#storage">Подробнее о слое Storage <span data-icon="arrow"></span></a>
+        </div>
+        <div class="panel">
+          <div class="panel-bar"><i></i><i></i><i></i><span class="t">storage · слои качества</span></div>
+          <div class="feed">
+            <div class="l"><span class="dot"></span> bronze · raw <span class="v muted">1.2 ТБ</span></div>
+            <div class="l"><span class="dot"></span> silver · clean <span class="v">820 ГБ</span></div>
+            <div class="l"><span class="dot"></span> gold · ready <span class="v amber">видимо BI</span></div>
+            <div class="l"><span class="dot"></span> версионирование <span class="v">вкл</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" data-panel="t-aibi">
+        <div class="tab-copy">
+          <h3>AI-BI: вопрос на языке — график в ответ</h3>
+          <p>LLM Router определяет тип запроса, переводит его в SQL по gold-витринам и собирает дашборд. Балансировка между моделями и cost-cap держат стоимость под контролем.</p>
+          <ul class="tab-list">
+            <li><span data-icon="check"></span> «Покажи продажи по регионам за квартал» → дашборд</li>
+            <li><span data-icon="check"></span> Балансировка Claude / Opus / Ollama и cost-cap на токены</li>
+            <li><span data-icon="check"></span> On-prem Ollama для приватного режима тенанта</li>
+          </ul>
+          <a class="btn-link" href="platform.html#ai-bi">Подробнее о слое AI-BI <span data-icon="arrow"></span></a>
+        </div>
+        <div class="panel">
+          <div class="panel-bar"><i></i><i></i><i></i><span class="t">ai-bi · llm router</span></div>
+          <div class="feed">
+            <div class="l"><span class="dot"></span> запрос: «маржа по SKU» <span class="v">Sonnet 4.6</span></div>
+            <div class="l"><span class="dot"></span> intent → SQL <span class="v">28 мс</span></div>
+            <div class="l"><span class="dot"></span> дашборд готов <span class="v amber">1.4 c</span></div>
+          </div>
+          <div class="bars"><span style="height:46%"></span><span style="height:62%"></span><span style="height:54%"></span><span style="height:78%"></span><span style="height:88%"></span><span style="height:70%"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section--tight">
+  <div class="container">
+    <div class="cta-band">
+      <div class="hero-glow"></div>
+      <h2>Посмотрите платформу в деле</h2>
+      <p>Покажем на ваших источниках, как три слоя DLP собирают live-дашборды и AI-инсайты за 2 часа.</p>
+      <div class="actions">
+        <a class="btn btn-primary btn-lg" href="#" data-demo>Запросить демо</a>
+        <a class="btn btn-ghost btn-lg" href="pricing.html">Сколько это стоит <span data-icon="arrow"></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="site-footer" class="site-footer"></footer>
+<script src="assets/site.js"></script>
+<script src="assets/ui.js"></script>
+</body>
+</html>

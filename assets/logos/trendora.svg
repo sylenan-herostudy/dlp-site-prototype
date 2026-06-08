@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 160" width="520" height="160" role="img" aria-label="Trendora · Cycle Compass">
+  <title>Trendora · Cycle Compass · Primary Horizontal</title>
+  <!--
+    Trendora · Cycle Compass · Primary Horizontal Lockup
+    Mark: 4 chevrons in compass formation. North = gold (current focus / peak).
+    North chevron is optically +4px larger than others (top-heavy correction).
+    Center: deliberately empty negative space.
+  -->
+
+  <!-- Mark (compass) -->
+  <g transform="translate(40,40)">
+    <!-- North · gold (optically larger) -->
+    <path d="M 40 4 L 64 28 L 58 33 L 40 16 L 22 33 L 16 28 Z" fill="#F5A623"/>
+    <!-- East · navy -->
+    <path d="M 76 40 L 52 64 L 47 58 L 64 40 L 47 22 L 52 16 Z" fill="#1A2858"/>
+    <!-- South · navy -->
+    <path d="M 40 76 L 16 52 L 22 47 L 40 64 L 58 47 L 64 52 Z" fill="#1A2858"/>
+    <!-- West · navy -->
+    <path d="M 4 40 L 28 16 L 33 22 L 16 40 L 33 58 L 28 64 Z" fill="#1A2858"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="160" y="100" font-family="Manrope, sans-serif" font-weight="700" font-size="60" fill="#0E1530" letter-spacing="-0.035em">Trendora</text>
+</svg>

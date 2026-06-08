@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Data Engineer — дайте логин, получите пайплайн и дашборды | DLP</title>
+<meta name="description" content="AI Data Engineer DLP: дайте логин-пароль к источнику или загрузите файлы — система сама обнаружит схему, построит пайплайн и соберёт дашборды. Без дата-инженера, за 2 часа.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230B2545'/><text x='14' y='23' font-family='Inter,sans-serif' font-weight='700' font-size='18' text-anchor='middle' fill='%23fff'>D</text><rect x='19' y='19' width='4' height='4' rx='1' fill='%2313C2C2'/></svg>">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="product">
+<header id="site-header"></header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="hero-eyebrow"><span data-icon="spark"></span> Killer feature DLP</span>
+        <h1>AI Data Engineer: дайте логин — получите пайплайн</h1>
+        <p class="hero-sub">Подключите источник по логину-паролю или загрузите файлы любого формата. Система сама обнаружит схему, соберёт пайплайн и построит дашборды. Дата-инженер не нужен.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary btn-lg" href="#" data-demo>Запросить демо</a>
+          <a class="btn btn-ghost btn-lg" href="#how-it-works">Как это работает <span data-icon="arrow"></span></a>
+        </div>
+        <div class="hero-meta">
+          <div class="m"><b>2 часа</b><span>от логина до дашборда</span></div>
+          <div class="m"><b>0</b><span>дата-инженеров в проекте</span></div>
+          <div class="m"><b>350+</b><span>поддержанных источников</span></div>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="flow">
+          <div class="flow-node">
+            <div class="ico-box"><span data-icon="key"></span></div>
+            <b>Логин / файлы</b>
+            <span>источник</span>
+          </div>
+          <div class="flow-rail"></div>
+          <div class="flow-node">
+            <div class="ico-box"><span data-icon="pipeline"></span></div>
+            <b>AI-пайплайн</b>
+            <span>авто</span>
+          </div>
+          <div class="flow-rail"></div>
+          <div class="flow-node end">
+            <div class="ico-box"><span data-icon="chartBar"></span></div>
+            <b>Дашборды</b>
+            <span>готово</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="section" id="how-it-works">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Преимущества</p>
+      <h2>Меньше людей, источников и недель ожидания</h2>
+      <p>То, на что у классического консалтинга уходит 1-2 месяца и 10-15 тысяч долларов, AI Data Engineer делает за часы и в 10 раз дешевле.</p>
+    </div>
+    <div class="benefits">
+      <div class="benefit reveal">
+        <div class="ico-box navy"><span data-icon="users"></span></div>
+        <h3>Без дата-инженера</h3>
+        <p>Не нужно нанимать или арендовать команду инженеров данных. Система сама пишет коннектор, чистит и моделирует данные.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="ico-box"><span data-icon="clock"></span></div>
+        <h3>2 часа до дашборда</h3>
+        <p>От ввода логина до первой live-витрины проходят часы, а не недели. Дашборды обновляются по расписанию автоматически.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="ico-box"><span data-icon="plug"></span></div>
+        <h3>Любой источник: логин, файл, API</h3>
+        <p>CRM, 1С, базы, маркетплейсы, соцсети, выгрузки в Excel и CSV. 350+ коннекторов Airbyte плюс кастом-парсеры под рынок.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS · STEPS -->
+<section class="section section--soft">
+  <div class="container">
+    <div class="section-head center">
+      <p class="eyebrow">Как это работает</p>
+      <h2>Три шага вместо месяцев настройки</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal" id="connect">
+        <div class="n">// шаг 1</div>
+        <h3>Подключение</h3>
+        <p>Вы вводите логин-пароль к источнику или перетаскиваете файлы. Токены сразу шифруются per-tenant ключом Fernet и не покидают границу тенанта.</p>
+        <div class="ex">connect --source "1c"<br>login: ****  ok</div>
+      </div>
+      <div class="step reveal" id="discover">
+        <div class="n">// шаг 2</div>
+        <h3>Обнаружение схемы</h3>
+        <p>Система сканирует источник, находит таблицы и связи, определяет типы и ключи. Сырые данные кладутся в bronze-слой как есть, с журналом каждого захода.</p>
+        <div class="ex">scan schema...<br>найдено таблиц: 42</div>
+      </div>
+      <div class="step reveal" id="activate">
+        <div class="n">// шаг 3</div>
+        <h3>Активация дашбордов</h3>
+        <p>AI-пайплайн чистит данные до silver и собирает витрины gold. На их основе генерируются дашборды, готовые к вопросам естественным языком.</p>
+        <div class="ex">pipeline built · авто<br>дашбордов: 6</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAPABILITIES -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Возможности</p>
+      <h2>Что AI Data Engineer делает за вас</h2>
+      <p>Восемь автоматических шагов закрывают весь путь данных — от подключения источника до обновляемых витрин и обработки сбоев.</p>
+    </div>
+    <div class="card-grid card-grid--4">
+      <article class="card reveal">
+        <div class="ico-box"><span data-icon="plug"></span></div>
+        <h3>Авто-обнаружение схемы</h3>
+        <p>Сканирует источник, находит таблицы, поля, типы и связи без ручного описания структуры.</p>
+      </article>
+      <article class="card reveal">
+        <div class="ico-box"><span data-icon="pipeline"></span></div>
+        <h3>Построение пайплайна</h3>
+        <p>Сам собирает цепочку извлечения, загрузки и трансформации данных под найденную схему.</p>
+      </article>
+      <article class="card reveal">
+        <div class="ico-box"><span data-icon="filter"></span></div>
+        <h3>Очистка bronze → silver → gold</h3>
+        <p>Приводит сырые данные к согласованным витринам: дедупликация, типизация, нормализация.</p>
+      </article>
+      <article class="card reveal">
+        <div class="ico-box"><span data-icon="chat"></span></div>
+        <h3>Промт-уточнения</h3>
+        <p>Если схема неоднозначна, задаёт уточняющие вопросы естественным языком и применяет ответ.</p>
+      </article>
+      <article class="card reveal">
+        <div class="ico-box"><span data-icon="chartLine"></span></div>
+        <h3>Авто-дашборды</h3>
+        <p>Генерирует базовые витрины по gold-слою: ключевые метрики, динамика, разрезы по измерениям.</p>
+      </article>
+      <article class="card reveal">
+        <div class="ico-box"><span data-icon="refresh"></span></div>
+        <h3>Инкрементальное обновление</h3>
+        <p>Подтягивает только новые и изменённые записи по расписанию, не перегружая источник.</p>
+      </article>
+      <article class="card reveal">
+        <div class="ico-box"><span data-icon="table"></span></div>
+        <h3>Версионирование</h3>
+        <p>Хранит полную историю версий данных на Apache Iceberg — можно вернуться к любому срезу.</p>
+      </article>
+      <article class="card reveal">
+        <div class="ico-box"><span data-icon="key"></span></div>
+        <h3>Обработка ошибок источника</h3>
+        <p>Ловит сбои подключения и смену схемы, повторяет заходы и пишет понятный лог инцидентов.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- USE CASES · TABS -->
+<section class="section section--soft" id="use-cases">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Сценарии</p>
+      <h2>Где AI Data Engineer уже работает</h2>
+      <p>Один и тот же механизм закрывает торговлю, образование, фуд-ритейл и внешние SaaS-проекты — меняются только источники.</p>
+    </div>
+    <div data-tabs>
+      <div class="tab-rail">
+        <button class="tab on" data-tab="trendora"><span data-icon="cart"></span> Trendora</button>
+        <button class="tab" data-tab="hero"><span data-icon="cap"></span> Hero Study</button>
+        <button class="tab" data-tab="horeca"><span data-icon="store"></span> Пилот (фуд-ритейл)</button>
+        <button class="tab" data-tab="saas"><span data-icon="globe"></span> Внешний SaaS</button>
+      </div>
+
+      <div class="tab-panel on" data-panel="trendora">
+        <div class="tab-copy">
+          <h3>Trendora: тренды по 1000+ SKU</h3>
+          <p>Таможня Китая, маркетплейсы и соцсети сводятся в один прогноз спроса. AI Data Engineer построил пайплайны под каждый источник без участия инженеров.</p>
+          <ul class="tab-list">
+            <li><span data-icon="check"></span> 1000+ SKU в едином каталоге товаров</li>
+            <li><span data-icon="check"></span> Парсеры таможни Китая, TikTok, Instagram</li>
+            <li><span data-icon="check"></span> Прогноз спроса до прихода тренда в регион</li>
+          </ul>
+          <a class="btn-link" href="customers.html#trendora">Открыть кейс Trendora <span data-icon="arrow"></span></a>
+        </div>
+        <div class="panel">
+          <div class="panel-bar"><i></i><i></i><i></i><span class="t">trendora · ingestion</span><span class="live">синк</span></div>
+          <div class="feed">
+            <div class="l"><span class="dot"></span> Таможня Китая <span class="v amber">парсинг 64%</span></div>
+            <div class="l"><span class="dot"></span> Wildberries API <span class="v">синхронизировано</span></div>
+            <div class="l"><span class="dot"></span> TikTok тренды <span class="v">синхронизировано</span></div>
+            <div class="l"><span class="dot"></span> SKU в каталоге <span class="v">1 240</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" data-panel="hero">
+        <div class="tab-copy">
+          <h3>Hero Study: успеваемость и финансы вузов</h3>
+          <p>LMS, бухгалтерия и приёмные базы вузов превращаются в live-аналитику для ректоратов и министерств. Раньше это были недели ручной сборки Excel'ей.</p>
+          <ul class="tab-list">
+            <li><span data-icon="check"></span> Успеваемость и посещаемость в реальном времени</li>
+            <li><span data-icon="check"></span> Финансы вузов: бюджеты, оплаты, стипендии</li>
+            <li><span data-icon="check"></span> Срезы по факультетам, группам, министерствам</li>
+          </ul>
+          <a class="btn-link" href="customers.html#hero">Открыть кейс Hero Study <span data-icon="arrow"></span></a>
+        </div>
+        <div class="panel">
+          <div class="panel-bar"><i></i><i></i><i></i><span class="t">hero · схема вуза</span></div>
+          <div class="feed">
+            <div class="l"><span class="dot"></span> LMS · успеваемость <span class="v">подключено</span></div>
+            <div class="l"><span class="dot"></span> Финансы вуза <span class="v">подключено</span></div>
+            <div class="l"><span class="dot"></span> Обнаружено таблиц <span class="v amber">31</span></div>
+            <div class="l"><span class="dot"></span> Дашбордов собрано <span class="v">8</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" data-panel="horeca">
+        <div class="tab-copy">
+          <h3>Пилот в фуд-ритейле: 30 документов в одном окне</h3>
+          <p>30 разрозненных документов и логинов превратились в живые дашборды за пару часов. Не пришлось нанимать дата-инженера или ждать консалтинг месяц.</p>
+          <ul class="tab-list">
+            <li><span data-icon="check"></span> Excel, выгрузки кассы, логины поставщиков</li>
+            <li><span data-icon="check"></span> Выручка, себестоимость, маржа по точкам</li>
+            <li><span data-icon="check"></span> Первый дашборд за пару часов</li>
+          </ul>
+          <a class="btn-link" href="customers.html#trendora">Читать о пилоте <span data-icon="arrow"></span></a>
+        </div>
+        <div class="panel">
+          <div class="panel-bar"><i></i><i></i><i></i><span class="t">horeca · загрузка файлов</span><span class="live">авто</span></div>
+          <div class="feed">
+            <div class="l"><span class="dot"></span> Загружено документов <span class="v">30</span></div>
+            <div class="l"><span class="dot"></span> Распознано таблиц <span class="v">18</span></div>
+            <div class="l"><span class="dot"></span> Пайплайн собран <span class="v amber">авто</span></div>
+            <div class="l"><span class="dot"></span> Дашбордов готово <span class="v">4</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" data-panel="saas">
+        <div class="tab-copy">
+          <h3>Внешний SaaS: данные клиента через Data API</h3>
+          <p>Внешние продукты подключают AI Data Engineer как движок данных и забирают готовые витрины через Data API. Каждый клиент — изолированный тенант.</p>
+          <ul class="tab-list">
+            <li><span data-icon="check"></span> Data API отдаёт готовые витрины gold-слоя</li>
+            <li><span data-icon="check"></span> Управление тенантами через Management API</li>
+            <li><span data-icon="check"></span> Zero Cross-Tenant: данные клиентов изолированы</li>
+          </ul>
+          <a class="btn-link" href="platform.html#data-api">Подробнее о Data API <span data-icon="arrow"></span></a>
+        </div>
+        <div class="panel">
+          <div class="panel-bar"><i></i><i></i><i></i><span class="t">saas · data api</span></div>
+          <div class="feed">
+            <div class="l"><span class="dot"></span> GET /v1/metrics/sales <span class="v">200</span></div>
+            <div class="l"><span class="dot"></span> tenant scoped <span class="v">да</span></div>
+            <div class="l"><span class="dot"></span> latency <span class="v amber">41 мс</span></div>
+            <div class="l"><span class="dot"></span> cross-tenant запрос <span class="v">заблокирован</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED PRODUCTS -->
+<section class="section" id="related">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Связанные продукты</p>
+      <h2>Из чего состоит платформа под капотом</h2>
+      <p>AI Data Engineer собирает воедино шесть слоёв DLP — от коннекторов до наблюдаемости и безопасности.</p>
+    </div>
+    <div class="card-grid card-grid--3">
+      <a class="card reveal" href="platform.html#ingestion">
+        <div class="ico-box"><span data-icon="plug"></span></div>
+        <h3>Ingestion · коннекторы</h3>
+        <p>350+ коннекторов Airbyte и кастом-парсеры под рынок СНГ и Китая.</p>
+        <span class="btn-link">Подробнее <span data-icon="arrow"></span></span>
+      </a>
+      <a class="card reveal" href="platform.html#storage">
+        <div class="ico-box"><span data-icon="database"></span></div>
+        <h3>Lakehouse-хранилище</h3>
+        <p>Apache Iceberg + S3 + PostgreSQL. bronze → silver → gold с версионированием.</p>
+        <span class="btn-link">Подробнее <span data-icon="arrow"></span></span>
+      </a>
+      <a class="card reveal" href="platform.html#ai-bi">
+        <div class="ico-box"><span data-icon="chartBar"></span></div>
+        <h3>AI-BI · LLM Router</h3>
+        <p>Промт → дашборд. Claude Sonnet 4.6 / Opus 4.7 / Ollama qwen с cost-cap.</p>
+        <span class="btn-link">Подробнее <span data-icon="arrow"></span></span>
+      </a>
+      <a class="card reveal" href="platform.html#data-api">
+        <div class="ico-box"><span data-icon="code"></span></div>
+        <h3>Data API</h3>
+        <p>Готовые витрины gold-слоя для ваших приложений — Vox, Trendora, Hero и внешних.</p>
+        <span class="btn-link">Подробнее <span data-icon="arrow"></span></span>
+      </a>
+      <a class="card reveal" href="platform.html#security">
+        <div class="ico-box"><span data-icon="lock"></span></div>
+        <h3>Zero Cross-Tenant</h3>
+        <p>Per-tenant Fernet, row-level security, аудит-лог. Даже разработчики не видят данные.</p>
+        <span class="btn-link">Подробнее <span data-icon="arrow"></span></span>
+      </a>
+      <a class="card reveal" href="platform.html#observability">
+        <div class="ico-box"><span data-icon="gauge"></span></div>
+        <h3>Observability</h3>
+        <p>Мониторинг пайплайнов, синков и инцидентов источников в одной панели.</p>
+        <span class="btn-link">Подробнее <span data-icon="arrow"></span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section--soft">
+  <div class="container">
+    <div class="section-head center">
+      <p class="eyebrow">Частые вопросы</p>
+      <h2>Что обычно спрашивают про AI Data Engineer</h2>
+    </div>
+    <div class="faq">
+      <div class="faq-item">
+        <button class="faq-q">Какие источники можно подключить?<span data-icon="plus"></span></button>
+        <div class="faq-a"><p>CRM, 1С, базы данных, маркетплейсы, соцсети, открытые данные ЦБ, файлы Excel и CSV. Это 350+ коннекторов Airbyte плюс собственные парсеры под рынок СНГ и Китая: таможня Китая, TikTok, Instagram, Google Trends, Yandex, Baidu, маркетплейсы.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Что с безопасностью данных?<span data-icon="plus"></span></button>
+        <div class="faq-a"><p>Действует принцип Zero Cross-Tenant. Каждый клиент — изолированный тенант: per-tenant Fernet-шифрование токенов источников, row-level security во всех таблицах, отдельные RAG-коллекции и аудит-лог каждой операции. Даже разработчики DLP не видят коммерческие данные клиента.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Нужен ли свой дата-инженер?<span data-icon="plus"></span></button>
+        <div class="faq-a"><p>Нет. В этом и суть AI Data Engineer: вы даёте логин-пароль или файлы, а система сама обнаруживает схему, строит пайплайн и собирает дашборды. Для нетипового источника она задаёт уточняющие вопросы естественным языком, а не требует ручного описания структуры.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Сколько занимает onboarding?<span data-icon="plus"></span></button>
+        <div class="faq-a"><p>От ввода логина до первого live-дашборда проходят часы, ориентир — 2 часа. У классического консалтинга на то же уходит 1-2 месяца и 10-15 тысяч долларов. Дальше дашборды обновляются инкрементально по расписанию без вашего участия.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Какие LLM используются?<span data-icon="plus"></span></button>
+        <div class="faq-a"><p>Запросы балансирует LLM Router между Claude Sonnet 4.6, Opus 4.7 и локальным Ollama qwen. Сложные задачи уходят на Claude, дешёвые и приватные — на on-prem Ollama. Действует cost-cap на токены, а биллинг считается в DLP-credits.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section--tight" id="cta">
+  <div class="container">
+    <div class="cta-band">
+      <div class="hero-glow"></div>
+      <h2>Дайте логин — посмотрим на ваших данных</h2>
+      <p>Подключим один из ваших источников и за пару часов покажем live-дашборды без дата-инженера.</p>
+      <div class="actions">
+        <a class="btn btn-primary btn-lg" href="#" data-demo>Запросить демо</a>
+        <a class="btn btn-ghost btn-lg" href="platform.html">Смотреть платформу <span data-icon="arrow"></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="site-footer" class="site-footer"></footer>
+<script src="assets/site.js"></script>
+<script src="assets/ui.js"></script>
+</body>
+</html>
