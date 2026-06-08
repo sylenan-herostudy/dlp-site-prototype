@@ -78,29 +78,28 @@
 
   /* ---- 2. Бренд / wordmark --------------------------------------------- */
   // Datasulus wordmark: 3×3 Amber dot grid слева + "Data Sulus" справа.
-  // Inter Semibold 600 для читаемости в небольших размерах.
+  // Inter Bold 700, font-size 24 — крупно и читабельно для display-роли.
   function brandSvg(light) {
     var fill = light ? '#FFFFFF' : '#0B2545';
-    // Dot grid: 3×3 точек, диаметр 3.6, шаг 5.4 → общий размер 14×14px.
+    // Dot grid: 3×3, диаметр 4.4, шаг 6.6 → общий размер 17.6×17.6px.
     var dots = '';
-    var step = 5.4;
+    var step = 6.6;
     for (var iy = 0; iy < 3; iy++) {
       for (var ix = 0; ix < 3; ix++) {
-        dots += '<circle cx="' + (ix * step + 1.8) + '" cy="' + (iy * step + 1.8) + '" r="1.8"/>';
+        dots += '<circle cx="' + (ix * step + 2.2) + '" cy="' + (iy * step + 2.2) + '" r="2.2"/>';
       }
     }
-    // viewBox 138×24: grid 14 + gap 10 + wordmark ~110 + padding 4
-    // Grid выровнен по центру по высоте (y=5 при высоте 14 → центр 12 ≈ baseline 18-2)
-    return '<svg viewBox="0 0 138 24" width="120" height="22" role="img" aria-label="Datasulus">' +
-      '<g transform="translate(0, 5)" fill="#FFC53D">' + dots + '</g>' +
-      '<text x="22" y="19" font-family="Inter,-apple-system,sans-serif" font-weight="600" font-size="19" letter-spacing="-.55" fill="' + fill + '">Data Sulus</text>' +
+    // viewBox 178×30: grid 18 + gap 12 + wordmark ~140 + padding 8
+    return '<svg viewBox="0 0 178 30" width="156" height="26" role="img" aria-label="Datasulus">' +
+      '<g transform="translate(0, 6)" fill="#FFC53D">' + dots + '</g>' +
+      '<text x="28" y="24" font-family="Inter,-apple-system,sans-serif" font-weight="700" font-size="24" letter-spacing="-.7" fill="' + fill + '">Data Sulus</text>' +
     '</svg>';
   }
 
   /* ---- 3. Модель навигации (мегаменю) ---------------------------------- */
   // d:demo  s:stub  (иначе обычный href). Каждый href резолвится: страница / якорь / demo / stub.
   var NAV = [
-    { id: 'why', label: 'Почему Datasulus', cols: [
+    { id: 'why', label: 'Почему', cols: [
         { h: 'Узнать', links: [
           { t: 'Для CEO и основателей', href: 'why.html#for-ceo', ic: 'target' },
           { t: 'Для дата-команд', href: 'why.html#for-data', ic: 'users' },
@@ -263,8 +262,8 @@
 
     return promo +
       '<div class="nav">' +
-        '<a class="brand" href="index.html" aria-label="Datasulus — на главную">' + brandSvg(true) +
-          '<small>AI Data Lakehouse</small></a>' +
+        '<a class="brand" href="index.html" aria-label="Datasulus — AI Data Lakehouse Platform">' + brandSvg(true) +
+          '<small>AI Data Lakehouse Platform</small></a>' +
         '<nav class="nav-top">' + items + '</nav>' +
         '<div class="nav-actions">' +
           '<span class="lang"><button class="on">RU</button><button>EN</button></span>' +
