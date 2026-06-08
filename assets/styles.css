@@ -115,11 +115,12 @@ p{margin:0 0 1rem}
 .nav{display:flex;align-items:center;gap:28px;height:var(--nav-h);max-width:1320px;margin:0 auto;padding:0 24px}
 .brand{display:inline-flex;flex-direction:column;align-items:flex-start;gap:4px;flex:none;line-height:1}
 .brand svg{display:block}
-/* tagline: подогнан под визуальную ширину текста "Data Sulus" в wordmark
-   (от 34 до ~190 в viewBox → в rendered px = padding-left 30 + width ~135) */
-.brand small{font-size:10px;color:rgba(255,255,255,.5);font-weight:300;letter-spacing:.27em;
-  white-space:nowrap;text-transform:uppercase;padding-left:30px;padding-right:.27em;
-  line-height:1;margin-top:2px}
+/* tagline: компактный subtle marker под wordmark.
+   font-size 8.5px Light + .22em letter-spacing → ширина ~110px,
+   subtle уже wordmark, не доминирует визуально. */
+.brand small{font-size:8.5px;color:rgba(255,255,255,.5);font-weight:300;letter-spacing:.22em;
+  white-space:nowrap;text-transform:uppercase;padding-left:30px;padding-right:.22em;
+  line-height:1;margin-top:3px}
 .nav-top{display:flex;align-items:stretch;gap:2px;height:100%;flex:1}
 .nav-item{position:relative;display:flex;align-items:center}
 .nav-item>a{display:flex;align-items:center;gap:6px;padding:0 14px;height:100%;font-weight:500;
