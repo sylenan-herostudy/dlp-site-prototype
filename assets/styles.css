@@ -20,7 +20,8 @@
   --dlp-line-dark:rgba(255,255,255,.14);
   --font-sans:'Inter',-apple-system,'Segoe UI',Roboto,sans-serif;
   --font-mono:'JetBrains Mono',ui-monospace,SFMono-Regular,monospace;
-  --maxw:1200px;  --nav-h:64px;  --r:10px;  --r-lg:16px;
+  --maxw:1200px;  --nav-h:64px;  --promo-h:40px;  --header-h:calc(var(--nav-h) + var(--promo-h));
+  --r:10px;  --r-lg:16px;
   --shadow-sm:0 1px 2px rgba(11,37,69,.06),0 1px 3px rgba(11,37,69,.05);
   --shadow-md:0 8px 24px rgba(11,37,69,.10);
   --shadow-lg:0 18px 50px rgba(11,37,69,.16);
@@ -28,7 +29,11 @@
 
 /* ---- reset / base -------------------------------------------------------- */
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:var(--header-h)}
+/* Anchor targets: резерв под sticky-шапку (promo-bar + nav).
+   Дублирует scroll-padding-top на html для надёжности (старый Safari,
+   programmatic scrollIntoView). */
+section[id],div[id],article[id]{scroll-margin-top:var(--header-h)}
 body{
   margin:0;font-family:var(--font-sans);color:var(--dlp-text);
   background:var(--dlp-bg);line-height:1.6;-webkit-font-smoothing:antialiased;
@@ -142,8 +147,14 @@ p{margin:0 0 1rem}
   background:var(--dlp-white);border:1px solid var(--dlp-line);border-radius:14px;
   box-shadow:var(--shadow-lg);padding:26px;display:flex;gap:30px;min-width:max-content;
   opacity:0;visibility:hidden;pointer-events:none;transition:.18s ease;z-index:120}
+/* Invisible hover-bridge: 12px невидимый мост между nav-item и mega-panel
+   (8px transform-gap + 4px на дрожание курсора). Без него курсор проваливается
+   в пустоту, JS-handler теряет .nav-item, меню схлопывается. */
+.mega-panel::before{content:"";position:absolute;left:0;right:0;top:-12px;height:12px;
+  background:transparent;pointer-events:none}
 .nav-item.is-open .mega-panel{opacity:1;visibility:visible;pointer-events:auto;
   transform:translateX(-50%) translateY(6px)}
+.nav-item.is-open .mega-panel::before{pointer-events:auto}
 .mega-cols{display:flex;gap:30px}
 .mega-col{min-width:190px}
 .mega-col h5{font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
