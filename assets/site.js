@@ -268,7 +268,6 @@
           '<small>AI Data Lakehouse</small></a>' +
         '<nav class="nav-top">' + items + '</nav>' +
         '<div class="nav-actions">' +
-          '<span class="lang"><button class="on">RU</button><button>EN</button></span>' +
           '<a class="nav-login" href="#" data-stub="app">Войти</a>' +
           '<a class="btn btn-primary" href="#" data-demo>Запросить демо</a>' +
           '<button class="nav-burger" aria-label="Меню"><span></span></button>' +
