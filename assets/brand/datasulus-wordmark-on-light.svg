@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Datasulus — Wordmark v2-03 · 3×3 Amber
+  Variant: on-light backgrounds (white, slate-50, light gray)
+
+  Typography: Inter Light 300, font-size 96, letter-spacing -0.035em
+  Wordmark color: Deep Navy #0B2545
+  Dot grid color: Insight Amber #FFC53D
+
+  IMPORTANT: Before using in production (print, PDF, embedded in other apps),
+  open this SVG in Figma/Illustrator and run "Convert text to outlines" so
+  the wordmark is not dependent on Inter being installed on the viewer's system.
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 500 120"
+     width="500" height="120"
+     role="img"
+     aria-label="Datasulus">
+
+  <defs>
+    <style type="text/css">
+      <![CDATA[
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+        .ds-wordmark {
+          font-family: 'Inter', -apple-system, system-ui, sans-serif;
+          font-weight: 300;
+          font-size: 96px;
+          letter-spacing: -3.36px;
+        }
+      ]]>
+    </style>
+  </defs>
+
+  <title>Datasulus wordmark — 3×3 Amber on light backgrounds</title>
+
+  <!-- Wordmark: Data Sulus -->
+  <text x="10" y="92" class="ds-wordmark" fill="#0B2545">Data Sulus</text>
+
+  <!-- Dot grid 3×3 in Insight Amber, positioned top-right (superscript) -->
+  <!-- Grid total size: 23×23px, dot diameter 5px (r=2.5), gap 2.8px -->
+  <g transform="translate(443, 10)" fill="#FFC53D">
+    <circle cx="2.5" cy="2.5" r="2.5"/>
+    <circle cx="13" cy="2.5" r="2.5"/>
+    <circle cx="23.5" cy="2.5" r="2.5"/>
+    <circle cx="2.5" cy="13" r="2.5"/>
+    <circle cx="13" cy="13" r="2.5"/>
+    <circle cx="23.5" cy="13" r="2.5"/>
+    <circle cx="2.5" cy="23.5" r="2.5"/>
+    <circle cx="13" cy="23.5" r="2.5"/>
+    <circle cx="23.5" cy="23.5" r="2.5"/>
+  </g>
+</svg>

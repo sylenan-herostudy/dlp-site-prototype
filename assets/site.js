@@ -1,5 +1,5 @@
 /* ============================================================================
-   DLP site chrome — единый источник правды для шапки, мегаменю, футера,
+   Datasulus site chrome — единый источник правды для шапки, мегаменю, футера,
    хлебных крошек, модалок и реестра иконок. Рендерится из JS-моделей на
    каждой странице (работает с file://, без сборки, без fetch).
    Vanilla IIFE. На этапе C маппится в React-компоненты + lucide-react.
@@ -77,18 +77,29 @@
   }
 
   /* ---- 2. Бренд / wordmark --------------------------------------------- */
+  // Datasulus v2-03 (3×3 Amber): "Data Sulus" Inter Light 300 + 3×3 dot grid
+  // в правом верхнем углу в Insight Amber #FFC53D.
   function brandSvg(light) {
     var fill = light ? '#FFFFFF' : '#0B2545';
-    return '<svg viewBox="0 0 130 28" width="86" height="20" role="img" aria-label="DLP">' +
-      '<text x="0" y="22" font-family="Inter,sans-serif" font-weight="700" font-size="25" letter-spacing="-1" fill="' + fill + '">D</text>' +
-      '<rect x="20" y="18" width="6" height="6" rx="1.5" fill="#13C2C2"/>' +
-      '<text x="30" y="22" font-family="Inter,sans-serif" font-weight="700" font-size="25" letter-spacing="-1" fill="' + fill + '">LP</text></svg>';
+    // Inter Light 22px ~ "Data Sulus" с letter-spacing -.6 даёт ~125px width.
+    // viewBox 152×26 оставляет место для dot grid + padding.
+    var dots = '';
+    var coords = [0, 4.5, 9];
+    for (var iy = 0; iy < coords.length; iy++) {
+      for (var ix = 0; ix < coords.length; ix++) {
+        dots += '<circle cx="' + (coords[ix] + 1.4) + '" cy="' + (coords[iy] + 1.4) + '" r="1.4"/>';
+      }
+    }
+    return '<svg viewBox="0 0 152 26" width="120" height="20" role="img" aria-label="Datasulus">' +
+      '<text x="0" y="21" font-family="Inter,sans-serif" font-weight="300" font-size="22" letter-spacing="-.7" fill="' + fill + '">Data Sulus</text>' +
+      '<g transform="translate(135, 1)" fill="#FFC53D">' + dots + '</g>' +
+    '</svg>';
   }
 
   /* ---- 3. Модель навигации (мегаменю) ---------------------------------- */
   // d:demo  s:stub  (иначе обычный href). Каждый href резолвится: страница / якорь / demo / stub.
   var NAV = [
-    { id: 'why', label: 'Почему DLP', cols: [
+    { id: 'why', label: 'Почему Datasulus', cols: [
         { h: 'Узнать', links: [
           { t: 'Для CEO и основателей', href: 'why.html#for-ceo', ic: 'target' },
           { t: 'Для дата-команд', href: 'why.html#for-data', ic: 'users' },
@@ -105,7 +116,7 @@
       ], feature: { kicker: 'Идея продукта', title: 'Почему вертикаль важнее набора инструментов', href: 'why.html#vertical' } },
 
     { id: 'product', label: 'Продукт', cols: [
-        { h: 'Платформа DLP', links: [
+        { h: 'Платформа Datasulus', links: [
           { t: 'Обзор платформы', href: 'platform.html', ic: 'layers' },
           { t: 'Коннекторы / Ingestion', href: 'platform.html#ingestion', ic: 'plug' },
           { t: 'Lakehouse-хранилище', href: 'platform.html#storage', ic: 'database' },
@@ -166,7 +177,7 @@
           { t: 'Контакты', href: 'company.html#contact', ic: 'mail' } ] },
         { h: 'Карьера', links: [
           { t: 'Открытые вакансии', href: 'careers.html#jobs', ic: 'briefcase' },
-          { t: 'Работа в DLP', href: 'careers.html#culture', ic: 'spark' } ] },
+          { t: 'Работа в Datasulus', href: 'careers.html#culture', ic: 'spark' } ] },
         { h: 'Пресса и доверие', links: [
           { t: 'Новости и награды', href: 'company.html#press', ic: 'flag' },
           { t: 'Безопасность и доверие', href: 'platform.html#security', ic: 'shield' } ] }
@@ -192,8 +203,8 @@
         ['О нас', 'company.html#mission'], ['Команда', 'company.html#leadership'],
         ['Клиенты', 'customers.html'], ['Карьера', 'careers.html'],
         ['Пресса', 'company.html#press'], ['Контакты', 'company.html#contact'] ] },
-      { h: 'Почему DLP', links: [
-        ['Почему DLP', 'why.html'], ['Для CEO', 'why.html#for-ceo'],
+      { h: 'Почему Datasulus', links: [
+        ['Почему Datasulus', 'why.html'], ['Для CEO', 'why.html#for-ceo'],
         ['Для дата-команд', 'why.html#for-data'], ['Экосистема', 'company.html#ecosystem'],
         ['Запросить демо', '@demo'] ] }
     ],
@@ -207,15 +218,15 @@
       solutions: 'solutions', customers: 'why', why: 'why',
       resources: 'resources', company: 'about', careers: 'about' },
     crumbs: {
-      platform: [['DLP', 'index.html'], ['Платформа', null]],
-      product: [['DLP', 'index.html'], ['Продукт', 'platform.html'], ['AI Data Engineer', null]],
-      solutions: [['DLP', 'index.html'], ['Решения', null]],
-      pricing: [['DLP', 'index.html'], ['Цены', null]],
-      resources: [['DLP', 'index.html'], ['Ресурсы', null]],
-      customers: [['DLP', 'index.html'], ['Клиенты', null]],
-      why: [['DLP', 'index.html'], ['Почему DLP', null]],
-      company: [['DLP', 'index.html'], ['Компания', null]],
-      careers: [['DLP', 'index.html'], ['Компания', 'company.html'], ['Карьера', null]]
+      platform: [['Datasulus', 'index.html'], ['Платформа', null]],
+      product: [['Datasulus', 'index.html'], ['Продукт', 'platform.html'], ['AI Data Engineer', null]],
+      solutions: [['Datasulus', 'index.html'], ['Решения', null]],
+      pricing: [['Datasulus', 'index.html'], ['Цены', null]],
+      resources: [['Datasulus', 'index.html'], ['Ресурсы', null]],
+      customers: [['Datasulus', 'index.html'], ['Клиенты', null]],
+      why: [['Datasulus', 'index.html'], ['Почему Datasulus', null]],
+      company: [['Datasulus', 'index.html'], ['Компания', null]],
+      careers: [['Datasulus', 'index.html'], ['Компания', 'company.html'], ['Карьера', null]]
     }
   };
 
@@ -229,7 +240,7 @@
   /* ---- 7. Рендер шапки ------------------------------------------------- */
   function renderHeader(active) {
     var topId = ROUTING.pageToTop[active];
-    var promo = '<div class="promo-bar">DLP — инфраструктура для AI Agentic Companies.' +
+    var promo = '<div class="promo-bar">Datasulus — инфраструктура для AI Agentic Companies.' +
       ' <a href="#" data-demo>Запросить демо <span data-icon="arrow"></span></a></div>';
 
     var items = NAV.map(function (it) {
@@ -251,8 +262,8 @@
 
     return promo +
       '<div class="nav">' +
-        '<a class="brand" href="index.html" aria-label="DLP — на главную">' + brandSvg(false) +
-          '<small>Data Lake Platform</small></a>' +
+        '<a class="brand" href="index.html" aria-label="Datasulus — на главную">' + brandSvg(false) +
+          '<small>AI Data Lakehouse</small></a>' +
         '<nav class="nav-top">' + items + '</nav>' +
         '<div class="nav-actions">' +
           '<span class="lang"><button class="on">RU</button><button>EN</button></span>' +
@@ -299,7 +310,7 @@
     return '<div class="container">' +
       '<div class="footer-grid">' +
         '<div class="footer-col footer-brand"><a class="brand" href="index.html">' + brandSvg(true) + '</a>' +
-          '<small>AI Data Lake Platform. Из 30 Excel’ей и логинов — live-дашборды и AI-инсайты за 2 часа.</small>' +
+          '<small>AI Data Lakehouse Platform. Из 30 Excel’ей и логинов — live-дашборды и AI-инсайты за 2 часа.</small>' +
           '<div class="footer-newsletter"><h5>Будьте в курсе</h5>' +
             '<form id="newsletterForm"><input type="email" placeholder="you@company.com" required>' +
             '<button type="submit">Подписаться</button></form>' +
@@ -309,7 +320,7 @@
       '<div class="footer-bottom">' +
         '<div class="footer-social">' + social + '</div>' +
         '<div class="footer-legal">' + legal + '</div>' +
-        '<div class="footer-copy">© 2026 DLP — AI Data Lake Platform · Прототип v0.1</div>' +
+        '<div class="footer-copy">© 2026 Datasulus · Прототип v0.3</div>' +
       '</div></div>';
   }
 
@@ -317,7 +328,7 @@
   function renderModals() {
     return '<div class="modal-overlay" id="demoModal">' +
       '<div class="modal"><button class="modal-close" data-close aria-label="Закрыть"><span data-icon="x"></span></button>' +
-        '<h3>Запросить демо</h3><p>Покажем, как DLP превращает ваши источники в live-дашборды за 2 часа.</p>' +
+        '<h3>Запросить демо</h3><p>Покажем, как Datasulus превращает ваши источники в live-дашборды за 2 часа.</p>' +
         '<form id="demoForm">' +
           '<div><label>Имя</label><input type="text" required></div>' +
           '<div><label>Компания</label><input type="text" required></div>' +
@@ -396,7 +407,9 @@
   }
 
   // expose icon helper for page scripts / ui.js
-  window.DLP = { icon: iconSvg, renderIcons: renderIcons, ICONS: ICONS };
+  window.Datasulus = { icon: iconSvg, renderIcons: renderIcons, ICONS: ICONS };
+  // Backward compat alias (page scripts may still use window.DLP)
+  window.DLP = window.Datasulus;
 
   if (document.readyState !== 'loading') init();
   else document.addEventListener('DOMContentLoaded', init);

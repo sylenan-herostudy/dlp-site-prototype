@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Datasulus — Icon (3×3 Amber dot grid only)
+  Use case: favicon, app icon, social avatar, watermark, Slack icon
+
+  Symbol: 3×3 grid of dots in Insight Amber #FFC53D
+  Background: transparent (will work on any color)
+
+  For solid-background versions (favicon-on-Navy / favicon-on-White), see
+  datasulus-icon-3x3-amber-on-navy.svg and datasulus-icon-3x3-amber-on-white.svg
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 32 32"
+     width="32" height="32"
+     role="img"
+     aria-label="Datasulus icon">
+
+  <title>Datasulus icon — 3×3 Amber dot grid</title>
+
+  <!-- 3×3 grid centered in 32×32 viewport -->
+  <!-- Dots: r=3.5, grid total ~23×23, centered with 4.5 padding -->
+  <g transform="translate(4.5, 4.5)" fill="#FFC53D">
+    <circle cx="3.5" cy="3.5" r="3.5"/>
+    <circle cx="11.5" cy="3.5" r="3.5"/>
+    <circle cx="19.5" cy="3.5" r="3.5"/>
+    <circle cx="3.5" cy="11.5" r="3.5"/>
+    <circle cx="11.5" cy="11.5" r="3.5"/>
+    <circle cx="19.5" cy="11.5" r="3.5"/>
+    <circle cx="3.5" cy="19.5" r="3.5"/>
+    <circle cx="11.5" cy="19.5" r="3.5"/>
+    <circle cx="19.5" cy="19.5" r="3.5"/>
+  </g>
+</svg>

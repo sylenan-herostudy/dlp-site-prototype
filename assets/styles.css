@@ -1,11 +1,12 @@
 /* ============================================================================
-   DLP — AI Data Lake Platform · сайт-прототип на IA Databricks
+   Datasulus — AI Data Lakehouse Platform · сайт-прототип на IA Databricks
    Дизайн-система: токены --dlp-* + все компоненты (chrome, hero, табы,
    карточки, карусель, диаграммы, таблицы, логотипы, аватары, обложки).
    Вся графика — inline SVG / CSS, без растра. Палитра/шрифты по brand-book v1.0.
+   Токены оставлены с префиксом --dlp-* для обратной совместимости стилей.
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 :root{
   --dlp-navy:#0B2545;        --dlp-navy-2:#0A1E3A;   --dlp-navy-3:#0E2B52;
