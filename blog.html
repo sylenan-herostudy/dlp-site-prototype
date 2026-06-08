@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Блог — Data Sulus · инженерия данных, кейсы клиентов, AI research</title>
+<meta name="description" content="Блог Data Sulus: технические статьи от команды (Iceberg lakehouse, LLM Router, AI Data Engineer), кейсы клиентов Trendora и Hero Study, AI-research.">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/brand/datasulus-favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/brand/datasulus-favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/brand/datasulus-icon-180-ios.png">
+<meta property="og:title" content="Блог — Data Sulus">
+<meta property="og:description" content="Блог Data Sulus: технические статьи от команды (Iceberg lakehouse, LLM Router, AI Data Engineer), кейсы клиентов Trendora и Hero Study, AI-research.">
+<meta property="og:image" content="assets/brand/datasulus-og-image-1200x630.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="assets/styles.css?v=013f165">
+</head>
+<body data-page="resources">
+<header id="site-header"></header>
+
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="container hero-grid">
+    <div>
+      <div class="hero-eyebrow"><span data-icon="pen"></span> Блог Data Sulus</div>
+      <h1>Инженерия данных,<br>кейсы клиентов и AI research</h1>
+      <p class="hero-sub">Технические статьи от команды Data Sulus: как мы строим lakehouse на Apache Iceberg, балансируем LLM Router между Sonnet и Ollama, обеспечиваем Zero Cross-Tenant изоляцию и помогаем клиентам превращать сырые данные в дашборды за 2 часа.</p>
+      <div class="hero-cta">
+        <button class="btn btn-primary btn-lg" data-demo><span data-icon="mail"></span> Подписаться на newsletter</button>
+        <a class="btn btn-ghost btn-lg" href="#latest"><span data-icon="arrow"></span> Последние посты</a>
+      </div>
+      <div class="hero-meta">
+        <div class="hero-metric"><strong>120+</strong><span>статей в архиве</span></div>
+        <div class="hero-metric"><strong>4</strong><span>категории контента</span></div>
+        <div class="hero-metric"><strong>2×</strong><span>публикации в неделю</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="dash">
+        <div class="dash-kpis">
+          <div class="dash-kpi"><span class="muted">Просмотры</span><strong>184K</strong></div>
+          <div class="dash-kpi"><span class="muted">Подписчиков</span><strong>3.2K</strong></div>
+          <div class="dash-kpi"><span class="muted">Avg. read</span><strong>7 мин</strong></div>
+        </div>
+        <div class="dash-chart">
+          <div class="dash-bar" style="height:38%"></div>
+          <div class="dash-bar" style="height:54%"></div>
+          <div class="dash-bar" style="height:46%"></div>
+          <div class="dash-bar" style="height:72%"></div>
+          <div class="dash-bar" style="height:61%"></div>
+          <div class="dash-bar" style="height:88%"></div>
+          <div class="dash-bar" style="height:78%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="categories">
+  <div class="container">
+    <div class="section-head center">
+      <div class="eyebrow"><span data-icon="layers"></span> Категории</div>
+      <h2>Четыре направления контента</h2>
+      <p class="lead">Глубокая техническая инженерия, живые кейсы внедрения, AI-research и продуктовые анонсы.</p>
+    </div>
+
+    <div class="card-grid card-grid--4">
+      <article class="card reveal" id="cat-engineering">
+        <div class="ico-box"><span data-icon="code"></span></div>
+        <h3>Engineering</h3>
+        <p class="muted">Архитектурные решения, бенчмарки, deep-dives по Iceberg, Airbyte, LLM Router и pipeline-инфраструктуре.</p>
+        <a class="btn-link" href="#latest"><span data-icon="arrow"></span> 48 статей</a>
+      </article>
+
+      <article class="card reveal" id="cat-customers">
+        <div class="ico-box"><span data-icon="star"></span></div>
+        <h3>Customer Stories</h3>
+        <p class="muted">Как Trendora, Hero Study и другие клиенты внедряют Data Sulus и какие метрики получают через 3-6 месяцев.</p>
+        <a class="btn-link" href="#latest"><span data-icon="arrow"></span> 27 кейсов</a>
+      </article>
+
+      <article class="card reveal" id="cat-research">
+        <div class="ico-box"><span data-icon="spark"></span></div>
+        <h3>AI Research</h3>
+        <p class="muted">Эксперименты с моделями, prompt engineering, evaluation harness, RAG-стратегии и AI Data Engineer.</p>
+        <a class="btn-link" href="#latest"><span data-icon="arrow"></span> 31 публикация</a>
+      </article>
+
+      <article class="card reveal" id="cat-product">
+        <div class="ico-box"><span data-icon="rocket"></span></div>
+        <h3>Product News</h3>
+        <p class="muted">Релизы, новые коннекторы из библиотеки 350+, обновления Workspace, roadmap и changelog платформы.</p>
+        <a class="btn-link" href="#latest"><span data-icon="arrow"></span> 19 анонсов</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--soft" id="latest">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow"><span data-icon="clock"></span> Последние публикации</div>
+      <h2>Что читают инженеры и CDO прямо сейчас</h2>
+      <p class="lead">Подборка свежих статей за последние 4 недели — от технических deep-dives до клиентских историй.</p>
+    </div>
+
+    <div class="card-grid card-grid--3">
+      <article class="card reveal" id="post-llm-router">
+        <div class="ico-box"><span data-icon="spark"></span></div>
+        <h3>Как мы строили LLM Router на Sonnet + Ollama</h3>
+        <p class="muted">Engineering · 12 мин чтения. Архитектура маршрутизации между Claude Sonnet 4.6 и локальным qwen3 для cost-cap и privacy mode.</p>
+        <a class="btn-link" href="#"><span data-icon="arrow"></span> Читать статью</a>
+      </article>
+
+      <article class="card reveal" id="post-trendora">
+        <div class="ico-box"><span data-icon="star"></span></div>
+        <h3>Trendora: автоматизация прогноза спроса на 1000+ SKU</h3>
+        <p class="muted">Customer Stories · 9 мин чтения. Как трейдинговая компания заменила 30 Excel-файлов на один lakehouse и сократила time-to-insight с 2 недель до 2 часов.</p>
+        <a class="btn-link" href="#"><span data-icon="arrow"></span> Читать кейс</a>
+      </article>
+
+      <article class="card reveal" id="post-iceberg">
+        <div class="ico-box"><span data-icon="database"></span></div>
+        <h3>Iceberg vs Delta Lake: наш выбор и почему</h3>
+        <p class="muted">Engineering · 15 мин чтения. Сравнение двух open-table форматов на нагрузках Data Sulus: time travel, schema evolution, partition pruning, vendor lock-in.</p>
+        <a class="btn-link" href="#"><span data-icon="arrow"></span> Читать сравнение</a>
+      </article>
+
+      <article class="card reveal" id="post-zero-tenant">
+        <div class="ico-box"><span data-icon="shield"></span></div>
+        <h3>Zero Cross-Tenant архитектура: как мы изолируем данные клиентов</h3>
+        <p class="muted">AI Research · 11 мин чтения. Per-tenant Fernet, row-level security в Postgres, изолированные RAG-коллекции и почему даже разработчики не видят клиентские данные.</p>
+        <a class="btn-link" href="#"><span data-icon="arrow"></span> Читать deep-dive</a>
+      </article>
+
+      <article class="card reveal" id="post-hero-study">
+        <div class="ico-box"><span data-icon="cap"></span></div>
+        <h3>Hero Study: BI для университетов Центральной Азии</h3>
+        <p class="muted">Customer Stories · 8 мин чтения. Как LMS-данные 12 вузов превратились в live-дашборды для министерств образования и ректоратов.</p>
+        <a class="btn-link" href="#"><span data-icon="arrow"></span> Читать кейс</a>
+      </article>
+
+      <article class="card reveal" id="post-ai-engineer">
+        <div class="ico-box"><span data-icon="pipeline"></span></div>
+        <h3>AI Data Engineer: от логина-пароля до дашборда без SQL</h3>
+        <p class="muted">Product News · 6 мин чтения. Анонс flagship-фичи Data Sulus: автоматическое построение pipeline и дашбордов через промпт, без участия инженера.</p>
+        <a class="btn-link" href="#"><span data-icon="arrow"></span> Читать анонс</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--navy" id="newsletter">
+  <div class="container">
+    <div class="section-head center">
+      <div class="eyebrow"><span data-icon="mail"></span> Newsletter</div>
+      <h2>Подписка на digest Data Sulus</h2>
+      <p class="lead">Раз в две недели — подборка лучших статей блога, новые коннекторы из библиотеки 350+, изменения в LLM Router и приглашения на закрытые вебинары для CDO и data-инженеров.</p>
+    </div>
+
+    <div class="card-grid card-grid--3">
+      <article class="card reveal" id="news-curated">
+        <div class="ico-box"><span data-icon="filter"></span></div>
+        <h3>Curated content</h3>
+        <p class="muted">Только то, что написала команда Data Sulus или наши клиенты. Никаких перепечаток и заполнителей.</p>
+      </article>
+
+      <article class="card reveal" id="news-early">
+        <div class="ico-box"><span data-icon="bolt"></span></div>
+        <h3>Early access</h3>
+        <p class="muted">Подписчики первыми получают доступ к beta-фичам, новым коннекторам и приватным techincal previews.</p>
+      </article>
+
+      <article class="card reveal" id="news-events">
+        <div class="ico-box"><span data-icon="calendar"></span></div>
+        <h3>Закрытые события</h3>
+        <p class="muted">Вебинары с архитекторами Apache Iceberg, AMA с CTO Data Sulus и live-разборы кейсов клиентов.</p>
+      </article>
+    </div>
+
+    <div class="hero-cta" style="justify-content:center;margin-top:32px">
+      <button class="btn btn-primary btn-lg" data-demo><span data-icon="mail"></span> Подписаться на digest</button>
+      <a class="btn btn-ghost btn-lg" href="#rss"><span data-icon="rss"></span> Или подключить RSS</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="rss">
+  <div class="container">
+    <div class="section-head center">
+      <div class="eyebrow"><span data-icon="rss"></span> Open feeds</div>
+      <h2>RSS, Atom и API блога</h2>
+      <p class="lead">Для тех, кто читает через свой reader, агрегатор или хочет встроить ленту Data Sulus в корпоративный портал.</p>
+    </div>
+
+    <div class="card-grid card-grid--3">
+      <article class="card reveal" id="feed-rss">
+        <div class="ico-box"><span data-icon="rss"></span></div>
+        <h3>RSS 2.0</h3>
+        <p class="muted">Полная лента всех публикаций блога. Совместима с Feedly, Inoreader, NetNewsWire и любым reader-приложением.</p>
+        <a class="btn-link" href="#"><span data-icon="arrow"></span> /blog/rss.xml</a>
+      </article>
+
+      <article class="card reveal" id="feed-atom">
+        <div class="ico-box"><span data-icon="globe"></span></div>
+        <h3>Atom 1.0</h3>
+        <p class="muted">Альтернативный формат для современных reader-клиентов и интеграций с корпоративным DocOps.</p>
+        <a class="btn-link" href="#"><span data-icon="arrow"></span> /blog/atom.xml</a>
+      </article>
+
+      <article class="card reveal" id="feed-api">
+        <div class="ico-box"><span data-icon="code"></span></div>
+        <h3>JSON API</h3>
+        <p class="muted">REST endpoint со списком публикаций, тегами и метаданными. Для embed-виджетов и автоматизаций.</p>
+        <a class="btn-link" href="#"><span data-icon="arrow"></span> /api/blog/posts</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<footer id="site-footer"></footer>
+<script src="assets/site.js?v=013f165"></script>
+<script src="assets/ui.js?v=013f165"></script>
+</body>
+</html>

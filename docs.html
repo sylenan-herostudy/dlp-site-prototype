@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Документация — Data Sulus Data API + Management API · полный справочник</title>
+<meta name="description" content="Полная документация Data Sulus: руководства, Data API, Management API, SDK для Python и Node, архитектура Lakehouse, безопасность и Zero Cross-Tenant. Всё на русском.">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/brand/datasulus-favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/brand/datasulus-favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/brand/datasulus-icon-180-ios.png">
+<meta property="og:title" content="Документация — Data Sulus">
+<meta property="og:description" content="Полная документация Data Sulus: руководства, Data API, Management API, SDK для Python и Node, архитектура Lakehouse, безопасность и Zero Cross-Tenant. Всё на русском.">
+<meta property="og:image" content="assets/brand/datasulus-og-image-1200x630.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="assets/styles.css?v=013f165">
+</head>
+<body data-page="resources">
+<header id="site-header"></header>
+
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="container hero-grid">
+    <div>
+      <div class="hero-eyebrow">
+        <span data-icon="book"></span>
+        <span>Documentation · v2.4</span>
+      </div>
+      <h1>Документация <br/>«Data Sulus»</h1>
+      <p class="hero-sub">Полный справочник по платформе: Quickstart, Data API, Management API, SDK для Python и Node, архитектура Lakehouse и протокол Zero Cross-Tenant. Всё на русском, с примерами кода и боевыми сценариями.</p>
+      <div class="hero-cta">
+        <button class="btn btn-primary btn-lg" data-demo>
+          <span data-icon="rocket"></span>
+          Начать с Quickstart
+        </button>
+        <a class="btn btn-ghost btn-lg" href="#api-data">
+          Перейти к API
+          <span data-icon="arrow"></span>
+        </a>
+      </div>
+      <div class="hero-meta">
+        <div>
+          <strong>120+</strong>
+          <span class="muted">страниц справочника</span>
+        </div>
+        <div>
+          <strong>350+</strong>
+          <span class="muted">коннекторов в каталоге</span>
+        </div>
+        <div>
+          <strong>2 SDK</strong>
+          <span class="muted">Python и Node, REST везде</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="dash">
+        <div class="dash-kpis">
+          <div class="dash-kpi"><span class="muted">API uptime</span><strong>99.98%</strong></div>
+          <div class="dash-kpi"><span class="muted">p95 latency</span><strong>180 мс</strong></div>
+          <div class="dash-kpi"><span class="muted">SDK версии</span><strong>2.4.1</strong></div>
+        </div>
+        <div class="dash-chart">
+          <div class="dash-bar" style="height: 42%"></div>
+          <div class="dash-bar" style="height: 58%"></div>
+          <div class="dash-bar" style="height: 71%"></div>
+          <div class="dash-bar" style="height: 64%"></div>
+          <div class="dash-bar" style="height: 82%"></div>
+          <div class="dash-bar" style="height: 76%"></div>
+          <div class="dash-bar" style="height: 91%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="quickstart">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow"><span data-icon="bolt"></span> Quickstart</div>
+      <h2>Три шага к первому дашборду</h2>
+      <p class="lead">От регистрации тенанта до live-дашборда — за 25 минут. Подходит для команды без data-инженеров.</p>
+    </div>
+    <div class="card-grid card-grid--3">
+      <article class="card reveal" id="qs-tenant">
+        <div class="ico-box"><span data-icon="building"></span></div>
+        <h3>Шаг 1. Создать тенант</h3>
+        <p class="muted">Регистрируем юр-лицо в Management API, получаем tenant_id и пару ключей для Fernet-шифрования.</p>
+        <a class="btn-link" href="#api-mgmt"><span data-icon="arrow"></span> CRUD тенантов</a>
+      </article>
+      <article class="card reveal" id="qs-source">
+        <div class="ico-box"><span data-icon="plug"></span></div>
+        <h3>Шаг 2. Подключить источник</h3>
+        <p class="muted">Выбираем коннектор из каталога 350+ (Airbyte, кастом-парсеры), даём логин-пароль, AI Data Engineer строит pipeline.</p>
+        <a class="btn-link" href="#arch"><span data-icon="arrow"></span> Ingestion слой</a>
+      </article>
+      <article class="card reveal" id="qs-query">
+        <div class="ico-box"><span data-icon="chartBar"></span></div>
+        <h3>Шаг 3. Спросить промтом</h3>
+        <p class="muted">Открываем чат, описываем дашборд словами. LLM Router сам выбирает модель и собирает визуализацию из gold-слоя.</p>
+        <a class="btn-link" href="#api-data"><span data-icon="arrow"></span> Data API</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--soft" id="api-data">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow"><span data-icon="code"></span> Data API</div>
+      <h2>Reference: endpoints для чтения и стриминга</h2>
+      <p class="lead">Всё, что нужно клиентскому приложению — от единичного запроса до WebSocket-стримов с инкрементами по факту.</p>
+    </div>
+    <div class="card-grid card-grid--4">
+      <article class="card reveal" id="api-query">
+        <div class="ico-box"><span data-icon="chat"></span></div>
+        <h3>POST /v2/query</h3>
+        <p class="muted">Промт на естественном языке возвращает таблицу, чарт или JSON. Поддерживает SQL-fallback и context-window до 200k токенов.</p>
+        <a class="btn-link" href="#"><span data-icon="arrow"></span> Параметры запроса</a>
+      </article>
+      <article class="card reveal" id="api-datasets">
+        <div class="ico-box"><span data-icon="table"></span></div>
+        <h3>GET /v2/datasets</h3>
+        <p class="muted">Каталог bronze/silver/gold таблиц с метаданными Iceberg: схема, partitioning, last_snapshot, владелец, теги.</p>
+        <a class="btn-link" href="#"><span data-icon="arrow"></span> Структура ответа</a>
+      </article>
+      <article class="card reveal" id="api-ws">
+        <div class="ico-box"><span data-icon="pipeline"></span></div>
+        <h3>WSS /v2/streams</h3>
+        <p class="muted">WebSocket-стрим инкрементов. Подписываемся на dataset_id, получаем CDC-события за сотни миллисекунд после фиксации.</p>
+        <a class="btn-link" href="#"><span data-icon="arrow"></span> Протокол сообщений</a>
+      </article>
+      <article class="card reveal" id="api-export">
+        <div class="ico-box"><span data-icon="cloud"></span></div>
+        <h3>POST /v2/export</h3>
+        <p class="muted">Выгрузка в Parquet, CSV, Google Sheets или прямой push в клиентский Iceberg-warehouse через S3 sign-url.</p>
+        <a class="btn-link" href="#"><span data-icon="arrow"></span> Форматы экспорта</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="api-mgmt">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow"><span data-icon="cog"></span> Management API</div>
+      <h2>Администрирование платформы</h2>
+      <p class="lead">Управление тенантами, источниками, ключами и audit-логом. Изолировано от Data API, под отдельной аутентификацией.</p>
+    </div>
+    <div class="card-grid card-grid--3">
+      <article class="card reveal" id="mgmt-tenants">
+        <div class="ico-box"><span data-icon="users"></span></div>
+        <h3>Tenants CRUD</h3>
+        <p class="muted">Создание, заморозка, удаление тенантов. Генерация пары Fernet-ключей, ротация без downtime, billing-метаданные.</p>
+        <a class="btn-link" href="#"><span data-icon="arrow"></span> /v2/admin/tenants</a>
+      </article>
+      <article class="card reveal" id="mgmt-sources">
+        <div class="ico-box"><span data-icon="database"></span></div>
+        <h3>Sources & Connectors</h3>
+        <p class="muted">Каталог 350+ коннекторов Airbyte плюс кастом-парсеры (таможня Китая, TikTok, ЦБ). Расписание, healthcheck, retry-политика.</p>
+        <a class="btn-link" href="#"><span data-icon="arrow"></span> /v2/admin/sources</a>
+      </article>
+      <article class="card reveal" id="mgmt-audit">
+        <div class="ico-box"><span data-icon="shield"></span></div>
+        <h3>Audit log</h3>
+        <p class="muted">Immutable-журнал всех операций чтения и изменения. Экспорт в SIEM (Splunk, ELK), фильтры по tenant, user, dataset.</p>
+        <a class="btn-link" href="#"><span data-icon="arrow"></span> /v2/admin/audit</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--soft" id="sdk">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow"><span data-icon="code"></span> SDK & инструменты</div>
+      <h2>Клиентские библиотеки и CLI</h2>
+      <p class="lead">Официальные SDK покрывают Data API и Management API, поддерживают async, retry с экспоненциальным backoff и встроенный rate-limiter.</p>
+    </div>
+    <div class="card-grid card-grid--4">
+      <article class="card reveal" id="sdk-py">
+        <div class="ico-box"><span data-icon="code"></span></div>
+        <h3>Python SDK 2.4</h3>
+        <p class="muted">pip install datasulus. Pandas и Polars adapters, типизация через pydantic v2, поддержка Jupyter и Streamlit.</p>
+        <a class="btn-link" href="#"><span data-icon="arrow"></span> PyPI и GitHub</a>
+      </article>
+      <article class="card reveal" id="sdk-node">
+        <div class="ico-box"><span data-icon="code"></span></div>
+        <h3>Node SDK 2.4</h3>
+        <p class="muted">npm i @datasulus/sdk. ESM плюс CommonJS, TypeScript-типы из коробки, готовые helpers для Next.js и NestJS.</p>
+        <a class="btn-link" href="#"><span data-icon="arrow"></span> npm и GitHub</a>
+      </article>
+      <article class="card reveal" id="sdk-rest">
+        <div class="ico-box"><span data-icon="globe"></span></div>
+        <h3>REST + OpenAPI</h3>
+        <p class="muted">Полная OpenAPI 3.1 спецификация, готовые Postman-коллекции, генераторы для Go, Java, .NET и Ruby.</p>
+        <a class="btn-link" href="#"><span data-icon="arrow"></span> Скачать схему</a>
+      </article>
+      <article class="card reveal" id="sdk-cli">
+        <div class="ico-box"><span data-icon="bolt"></span></div>
+        <h3>CLI datasulus</h3>
+        <p class="muted">Одна команда для деплоя pipeline, экспорта датасета и просмотра audit-лога. Удобно встраивать в CI/CD.</p>
+        <a class="btn-link" href="#"><span data-icon="arrow"></span> Установка</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="arch">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow"><span data-icon="layers"></span> Архитектура</div>
+      <h2>Три слоя «Data Sulus»</h2>
+      <p class="lead">Ingestion на Airbyte и кастом-парсерах, Lakehouse на Apache Iceberg плюс S3, AI-BI с LLM Router. Каждый слой документирован отдельно с ADR-историей.</p>
+    </div>
+    <div class="card-grid card-grid--3">
+      <article class="card reveal" id="arch-ingest">
+        <div class="ico-box"><span data-icon="plug"></span></div>
+        <h3>Ingestion слой</h3>
+        <p class="muted">350+ коннекторов Airbyte, AI Data Engineer для автогенерации pipeline, batch и CDC-режимы. Bronze-слой — сырая копия источника.</p>
+        <a class="btn-link" href="#"><span data-icon="arrow"></span> Подробнее</a>
+      </article>
+      <article class="card reveal" id="arch-lake">
+        <div class="ico-box"><span data-icon="database"></span></div>
+        <h3>Lakehouse</h3>
+        <p class="muted">Apache Iceberg на S3 с time-travel и schema evolution, PostgreSQL для агрегатов. Silver-слой — очищенные данные, gold — витрины.</p>
+        <a class="btn-link" href="#"><span data-icon="arrow"></span> Подробнее</a>
+      </article>
+      <article class="card reveal" id="arch-aibi">
+        <div class="ico-box"><span data-icon="spark"></span></div>
+        <h3>AI-BI слой</h3>
+        <p class="muted">LLM Router балансирует Claude Sonnet 4.6, Opus 4.7 и локальный Ollama qwen3. Промт превращается в дашборд за секунды.</p>
+        <a class="btn-link" href="#"><span data-icon="arrow"></span> Подробнее</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<footer id="site-footer"></footer>
+<script src="assets/site.js?v=013f165"></script>
+<script src="assets/ui.js?v=013f165"></script>
+</body>
+</html>

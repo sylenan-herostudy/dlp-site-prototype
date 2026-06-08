@@ -158,18 +158,18 @@
 
     { id: 'resources', label: 'Ресурсы', cols: [
         { h: 'Обучение', links: [
-          { t: 'Тренинги', href: 'resources.html#learning', ic: 'book' },
-          { t: 'Академия и сертификация', href: 'resources.html#learning', ic: 'star' },
-          { t: 'Free Edition', href: 'resources.html#learning', ic: 'bolt' } ] },
+          { t: 'Тренинги', href: 'learning.html#training', ic: 'book' },
+          { t: 'Академия и сертификация', href: 'learning.html#academy', ic: 'star' },
+          { t: 'Free Edition', href: 'learning.html#free-edition', ic: 'bolt' } ] },
         { h: 'События и контент', links: [
-          { t: 'Data + AI события', href: 'resources.html#events', ic: 'calendar' },
-          { t: 'Блог', href: 'resources.html#blog', ic: 'pen' },
-          { t: 'Подкасты', href: 'resources.html#blog', ic: 'chat' } ] },
+          { t: 'Data + AI события', href: 'events.html#upcoming', ic: 'calendar' },
+          { t: 'Блог', href: 'blog.html#latest', ic: 'pen' },
+          { t: 'Подкасты', href: 'blog.html#categories', ic: 'chat' } ] },
         { h: 'Поддержка', links: [
-          { t: 'Документация', href: 'resources.html#docs', ic: 'code' },
-          { t: 'Поддержка клиентов', href: 'resources.html#support', ic: 'lifebuoy' },
-          { t: 'Сообщество', href: 'resources.html#community', ic: 'chatGroup' } ] }
-      ], feature: { kicker: 'Для разработчиков', title: 'Документация Data API и Management API', href: 'resources.html#docs' } },
+          { t: 'Документация', href: 'docs.html#quickstart', ic: 'code' },
+          { t: 'Поддержка клиентов', href: 'support.html#tiers', ic: 'lifebuoy' },
+          { t: 'Сообщество', href: 'community.html#channels', ic: 'chatGroup' } ] }
+      ], feature: { kicker: 'Для разработчиков', title: 'Документация Data API и Management API', href: 'docs.html#api-data' } },
 
     { id: 'about', label: 'Компания', cols: [
         { h: 'Компания', links: [
@@ -198,9 +198,9 @@
         ['Финансы', 'solutions.html#finance'], ['Trade Intelligence', 'solutions.html#accelerators'],
         ['Все индустрии', 'solutions.html#industries'] ] },
       { h: 'Ресурсы', links: [
-        ['Документация', 'resources.html#docs'], ['Блог', 'resources.html#blog'],
-        ['События', 'resources.html#events'], ['Обучение', 'resources.html#learning'],
-        ['Сообщество', 'resources.html#community'] ] },
+        ['Документация', 'docs.html'], ['Блог', 'blog.html'],
+        ['События', 'events.html'], ['Обучение', 'learning.html'],
+        ['Сообщество', 'community.html'], ['Поддержка', 'support.html'] ] },
       { h: 'Компания', links: [
         ['О нас', 'company.html#mission'], ['Команда', 'company.html#leadership'],
         ['Клиенты', 'customers.html'], ['Карьера', 'careers.html'],
@@ -218,13 +218,21 @@
   var ROUTING = {
     pageToTop: { platform: 'product', product: 'product', pricing: 'product',
       solutions: 'solutions', customers: 'why', why: 'why',
-      resources: 'resources', company: 'about', careers: 'about' },
+      resources: 'resources', docs: 'resources', learning: 'resources',
+      events: 'resources', blog: 'resources', community: 'resources', support: 'resources',
+      company: 'about', careers: 'about' },
     crumbs: {
       platform: [['Data Sulus', 'index.html'], ['Платформа', null]],
       product: [['Data Sulus', 'index.html'], ['Продукт', 'platform.html'], ['AI Data Engineer', null]],
       solutions: [['Data Sulus', 'index.html'], ['Решения', null]],
       pricing: [['Data Sulus', 'index.html'], ['Цены', null]],
       resources: [['Data Sulus', 'index.html'], ['Ресурсы', null]],
+      docs: [['Data Sulus', 'index.html'], ['Ресурсы', 'resources.html'], ['Документация', null]],
+      learning: [['Data Sulus', 'index.html'], ['Ресурсы', 'resources.html'], ['Обучение', null]],
+      events: [['Data Sulus', 'index.html'], ['Ресурсы', 'resources.html'], ['События', null]],
+      blog: [['Data Sulus', 'index.html'], ['Ресурсы', 'resources.html'], ['Блог', null]],
+      community: [['Data Sulus', 'index.html'], ['Ресурсы', 'resources.html'], ['Сообщество', null]],
+      support: [['Data Sulus', 'index.html'], ['Ресурсы', 'resources.html'], ['Поддержка', null]],
       customers: [['Data Sulus', 'index.html'], ['Клиенты', null]],
       why: [['Data Sulus', 'index.html'], ['Почему Data Sulus', null]],
       company: [['Data Sulus', 'index.html'], ['Компания', null]],
