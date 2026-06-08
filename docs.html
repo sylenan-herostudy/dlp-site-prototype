@@ -236,6 +236,82 @@
   </div>
 </section>
 
+<section class="section section--soft" id="cookbook">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow"><span data-icon="book"></span> Cookbook</div>
+      <h2>Готовые рецепты под типовые задачи</h2>
+      <p class="lead">Сборник пошаговых руководств для частых сценариев: от подключения первого источника до production-readiness.</p>
+    </div>
+    <div class="card-grid card-grid--3">
+      <article class="card reveal" id="cb-airbyte">
+        <div class="ico-box"><span data-icon="plug"></span></div>
+        <h3>Подключаем Airbyte-коннектор</h3>
+        <p class="muted">Шаг за шагом: выбор коннектора из каталога, OAuth-flow, schedule, инкрементальная синхронизация и обработка ошибок.</p>
+        <a class="btn-link" href="#"><span data-icon="arrow"></span> Открыть рецепт</a>
+      </article>
+      <article class="card reveal" id="cb-custom">
+        <div class="ico-box"><span data-icon="code"></span></div>
+        <h3>Пишем кастом-парсер</h3>
+        <p class="muted">Когда готового коннектора нет: SDK-template на Python, тестирование на dev-tenant, публикация во внутренний каталог.</p>
+        <a class="btn-link" href="#"><span data-icon="arrow"></span> Открыть рецепт</a>
+      </article>
+      <article class="card reveal" id="cb-medallion">
+        <div class="ico-box"><span data-icon="layers"></span></div>
+        <h3>Bronze → Silver → Gold</h3>
+        <p class="muted">Проектирование medallion-архитектуры: партиционирование Iceberg, schema evolution, retention-политики на каждый слой.</p>
+        <a class="btn-link" href="#"><span data-icon="arrow"></span> Открыть рецепт</a>
+      </article>
+      <article class="card reveal" id="cb-rbac">
+        <div class="ico-box"><span data-icon="lock"></span></div>
+        <h3>RBAC и row-level security</h3>
+        <p class="muted">Настройка ролей через Management API, шаблоны политик доступа, аудит-лог изменений прав, интеграция с SSO.</p>
+        <a class="btn-link" href="#"><span data-icon="arrow"></span> Открыть рецепт</a>
+      </article>
+      <article class="card reveal" id="cb-llm">
+        <div class="ico-box"><span data-icon="spark"></span></div>
+        <h3>Тюним LLM Router</h3>
+        <p class="muted">Балансировка стоимости между Claude Sonnet и Ollama, fallback-стратегии, кэширование промтов, RAG поверх gold-слоя.</p>
+        <a class="btn-link" href="#"><span data-icon="arrow"></span> Открыть рецепт</a>
+      </article>
+      <article class="card reveal" id="cb-migration">
+        <div class="ico-box"><span data-icon="refresh"></span></div>
+        <h3>Миграция со Snowflake</h3>
+        <p class="muted">Импорт схем через DDL-converter, перенос данных через S3-sign, проверка консистентности, cutover-план для production.</p>
+        <a class="btn-link" href="#"><span data-icon="arrow"></span> Открыть рецепт</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow"><span data-icon="chat"></span> FAQ для разработчиков</div>
+      <h2>Часто задаваемые вопросы</h2>
+      <p class="lead">Краткие ответы на технические вопросы команд, которые впервые работают с «Data Sulus». Развёрнутые ответы — в справочнике.</p>
+    </div>
+    <div class="card-grid card-grid--2">
+      <article class="card reveal">
+        <h3>Какие лимиты у API?</h3>
+        <p class="muted">По умолчанию 100 req/sec на тенант для Data API и 30 req/sec для Management API. Лимиты повышаются на тарифах Business и Enterprise через support-тикет.</p>
+      </article>
+      <article class="card reveal">
+        <h3>Поддерживается ли streaming с CDC?</h3>
+        <p class="muted">Да, через WebSocket WSS /v2/streams. Подписка на dataset_id, формат сообщений — JSON с полями op, before, after, tx_id. Latency 100-300 мс при нагрузке до 10K событий/сек.</p>
+      </article>
+      <article class="card reveal">
+        <h3>Можно ли деплоить на свой Kubernetes?</h3>
+        <p class="muted">Да, на тарифе Enterprise. Поставляем Helm-chart с manifest для AWS EKS, Yandex Cloud и self-managed K8s. Inference-узлы Ollama развёртываются отдельным namespace.</p>
+      </article>
+      <article class="card reveal">
+        <h3>Как работает версионирование данных?</h3>
+        <p class="muted">Apache Iceberg snapshots — каждая запись создаёт новый snapshot. Time-travel запросы через AS OF TIMESTAMP. Retention настраивается на тенант, по умолчанию 90 дней.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
 <footer id="site-footer"></footer>
 <script src="assets/site.js?v=51833b0"></script>
 <script src="assets/ui.js?v=51833b0"></script>

@@ -163,10 +163,10 @@
           { t: 'Free Edition', href: 'learning.html#free-edition', ic: 'bolt' } ] },
         { h: 'События и контент', links: [
           { t: 'Data + AI события', href: 'events.html#upcoming', ic: 'calendar' },
-          { t: 'Блог', href: 'blog.html#latest', ic: 'pen' },
-          { t: 'Подкасты', href: 'blog.html#categories', ic: 'chat' } ] },
+          { t: 'Блог', href: 'blog.html', ic: 'pen' },
+          { t: 'Подкасты', href: 'blog.html#podcasts', ic: 'chat' } ] },
         { h: 'Поддержка', links: [
-          { t: 'Документация', href: 'docs.html#quickstart', ic: 'code' },
+          { t: 'Документация', href: 'docs.html', ic: 'code' },
           { t: 'Поддержка клиентов', href: 'support.html#tiers', ic: 'lifebuoy' },
           { t: 'Сообщество', href: 'community.html#channels', ic: 'chatGroup' } ] }
       ], feature: { kicker: 'Для разработчиков', title: 'Документация Data API и Management API', href: 'docs.html#api-data' } },
