@@ -77,22 +77,23 @@
   }
 
   /* ---- 2. Бренд / wordmark --------------------------------------------- */
-  // Datasulus v2-03 (3×3 Amber): "Data Sulus" Inter Light 300 + 3×3 dot grid
-  // в правом верхнем углу в Insight Amber #FFC53D.
+  // Datasulus wordmark: 3×3 Amber dot grid слева + "Data Sulus" справа.
+  // Inter Semibold 600 для читаемости в небольших размерах.
   function brandSvg(light) {
     var fill = light ? '#FFFFFF' : '#0B2545';
-    // Inter Light 22px ~ "Data Sulus" с letter-spacing -.6 даёт ~125px width.
-    // viewBox 152×26 оставляет место для dot grid + padding.
+    // Dot grid: 3×3 точек, диаметр 3.6, шаг 5.4 → общий размер 14×14px.
     var dots = '';
-    var coords = [0, 4.5, 9];
-    for (var iy = 0; iy < coords.length; iy++) {
-      for (var ix = 0; ix < coords.length; ix++) {
-        dots += '<circle cx="' + (coords[ix] + 1.4) + '" cy="' + (coords[iy] + 1.4) + '" r="1.4"/>';
+    var step = 5.4;
+    for (var iy = 0; iy < 3; iy++) {
+      for (var ix = 0; ix < 3; ix++) {
+        dots += '<circle cx="' + (ix * step + 1.8) + '" cy="' + (iy * step + 1.8) + '" r="1.8"/>';
       }
     }
-    return '<svg viewBox="0 0 152 26" width="120" height="20" role="img" aria-label="Datasulus">' +
-      '<text x="0" y="21" font-family="Inter,sans-serif" font-weight="300" font-size="22" letter-spacing="-.7" fill="' + fill + '">Data Sulus</text>' +
-      '<g transform="translate(135, 1)" fill="#FFC53D">' + dots + '</g>' +
+    // viewBox 138×24: grid 14 + gap 10 + wordmark ~110 + padding 4
+    // Grid выровнен по центру по высоте (y=5 при высоте 14 → центр 12 ≈ baseline 18-2)
+    return '<svg viewBox="0 0 138 24" width="120" height="22" role="img" aria-label="Datasulus">' +
+      '<g transform="translate(0, 5)" fill="#FFC53D">' + dots + '</g>' +
+      '<text x="22" y="19" font-family="Inter,-apple-system,sans-serif" font-weight="600" font-size="19" letter-spacing="-.55" fill="' + fill + '">Data Sulus</text>' +
     '</svg>';
   }
 
@@ -262,7 +263,7 @@
 
     return promo +
       '<div class="nav">' +
-        '<a class="brand" href="index.html" aria-label="Datasulus — на главную">' + brandSvg(false) +
+        '<a class="brand" href="index.html" aria-label="Datasulus — на главную">' + brandSvg(true) +
           '<small>AI Data Lakehouse</small></a>' +
         '<nav class="nav-top">' + items + '</nav>' +
         '<div class="nav-actions">' +

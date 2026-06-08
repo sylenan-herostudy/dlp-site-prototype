@@ -97,34 +97,41 @@ p{margin:0 0 1rem}
 .ico-box.navy{background:var(--dlp-navy);color:var(--dlp-cyan)}
 .ico-box.amber{background:rgba(255,197,61,.18);color:#b07d00}
 
-/* ---- header / chrome ----------------------------------------------------- */
-.site-header{position:sticky;top:0;z-index:100;background:var(--dlp-white);
-  border-bottom:1px solid var(--dlp-line)}
-.promo-bar{background:var(--dlp-navy);color:#fff;font-size:.86rem;text-align:center;
-  padding:9px 24px;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
+/* ---- header / chrome (DARK NAVY) ---------------------------------------- */
+.site-header{position:sticky;top:0;z-index:100;background:var(--dlp-navy);
+  border-bottom:1px solid rgba(255,255,255,.08);box-shadow:0 1px 0 rgba(0,0,0,.25)}
+.site-header.is-scrolled{box-shadow:0 4px 16px rgba(0,0,0,.35)}
+.promo-bar{background:var(--dlp-navy-2);color:rgba(255,255,255,.85);font-size:.86rem;text-align:center;
+  padding:9px 24px;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;
+  border-bottom:1px solid rgba(255,255,255,.06)}
 .promo-bar a{color:var(--dlp-cyan);font-weight:600;display:inline-flex;align-items:center;gap:5px}
+.promo-bar a:hover{color:#16d4d4}
 .promo-bar a .ico{width:14px;height:14px}
 .nav{display:flex;align-items:center;gap:22px;height:var(--nav-h);max-width:1320px;margin:0 auto;padding:0 24px}
-.brand{display:flex;align-items:center;gap:11px;flex:none}
-.brand small{font-size:11px;color:var(--dlp-muted);font-weight:500;letter-spacing:.01em;white-space:nowrap}
+.brand{display:flex;align-items:center;gap:14px;flex:none}
+.brand small{font-size:11px;color:rgba(255,255,255,.55);font-weight:500;letter-spacing:.04em;
+  white-space:nowrap;text-transform:uppercase;border-left:1px solid rgba(255,255,255,.15);
+  padding-left:14px;display:inline-block}
 .nav-top{display:flex;align-items:stretch;gap:2px;height:100%;flex:1}
 .nav-item{position:relative;display:flex;align-items:center}
 .nav-item>a{display:flex;align-items:center;gap:6px;padding:0 14px;height:100%;font-weight:500;
-  font-size:.96rem;color:var(--dlp-text);border-bottom:2px solid transparent}
+  font-size:.96rem;color:rgba(255,255,255,.82);border-bottom:2px solid transparent;transition:color .15s}
 .nav-item>a .chev{width:13px;height:13px;opacity:.55;transition:transform .2s ease}
-.nav-item:hover>a,.nav-item.is-open>a{color:var(--dlp-navy)}
-.nav-item.is-open>a .chev{transform:rotate(180deg)}
-.nav-item>a.active{color:var(--dlp-navy);border-bottom-color:var(--dlp-cyan)}
+.nav-item:hover>a,.nav-item.is-open>a{color:#fff}
+.nav-item.is-open>a .chev{transform:rotate(180deg);opacity:.85}
+.nav-item>a.active{color:#fff;border-bottom-color:var(--dlp-cyan)}
 .nav-actions{display:flex;align-items:center;gap:14px;flex:none}
-.lang{display:inline-flex;border:1px solid var(--dlp-line-strong);border-radius:7px;overflow:hidden}
+.lang{display:inline-flex;border:1px solid rgba(255,255,255,.18);border-radius:7px;overflow:hidden}
 .lang button{background:transparent;border:0;padding:5px 9px;font-size:.78rem;font-weight:600;
-  color:var(--dlp-muted);font-family:var(--font-mono)}
-.lang button.on{background:var(--dlp-navy);color:#fff}
-.nav-login{font-weight:600;font-size:.92rem;color:var(--dlp-navy)}
-.nav-burger{display:none;width:42px;height:42px;border:1px solid var(--dlp-line-strong);
-  border-radius:8px;background:#fff;align-items:center;justify-content:center}
-.nav-burger span{position:relative;width:18px;height:1.6px;background:var(--dlp-navy)}
-.nav-burger span::before,.nav-burger span::after{content:"";position:absolute;left:0;width:18px;height:1.6px;background:var(--dlp-navy)}
+  color:rgba(255,255,255,.55);font-family:var(--font-mono);transition:.15s}
+.lang button:hover{color:rgba(255,255,255,.85)}
+.lang button.on{background:var(--dlp-cyan);color:var(--dlp-navy)}
+.nav-login{font-weight:600;font-size:.92rem;color:rgba(255,255,255,.82);transition:.15s}
+.nav-login:hover{color:#fff}
+.nav-burger{display:none;width:42px;height:42px;border:1px solid rgba(255,255,255,.2);
+  border-radius:8px;background:transparent;align-items:center;justify-content:center}
+.nav-burger span{position:relative;width:18px;height:1.6px;background:#fff}
+.nav-burger span::before,.nav-burger span::after{content:"";position:absolute;left:0;width:18px;height:1.6px;background:#fff}
 .nav-burger span::before{top:-6px}.nav-burger span::after{top:6px}
 
 /* mega panel */
