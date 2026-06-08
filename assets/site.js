@@ -1,5 +1,5 @@
 /* ============================================================================
-   Datasulus site chrome — единый источник правды для шапки, мегаменю, футера,
+   Data Sulus site chrome — единый источник правды для шапки, мегаменю, футера,
    хлебных крошек, модалок и реестра иконок. Рендерится из JS-моделей на
    каждой странице (работает с file://, без сборки, без fetch).
    Vanilla IIFE. На этапе C маппится в React-компоненты + lucide-react.
@@ -77,7 +77,7 @@
   }
 
   /* ---- 2. Бренд / wordmark --------------------------------------------- */
-  // Datasulus wordmark: 3×3 Amber dot grid слева + "Data Sulus" справа.
+  // Data Sulus wordmark: 3×3 Amber dot grid слева + "Data Sulus" справа.
   // Inter Bold 700, font-size 30. Размер подогнан так, чтобы tagline
   // «AI Data Lakehouse» помещалась под низ точно по ширине wordmark.
   function brandSvg(light) {
@@ -92,7 +92,7 @@
     }
     // viewBox 210×36: grid 21 + gap 13 + wordmark ~170 + padding 6
     // Rendered: width=185 height=32 (scale 0.88)
-    return '<svg viewBox="0 0 210 36" width="185" height="32" role="img" aria-label="Datasulus">' +
+    return '<svg viewBox="0 0 210 36" width="185" height="32" role="img" aria-label="Data Sulus">' +
       '<g transform="translate(0, 7)" fill="#FFC53D">' + dots + '</g>' +
       '<text x="34" y="29" font-family="Inter,-apple-system,sans-serif" font-weight="700" font-size="30" letter-spacing="-.9" fill="' + fill + '">Data Sulus</text>' +
     '</svg>';
@@ -118,7 +118,7 @@
       ], feature: { kicker: 'Идея продукта', title: 'Почему вертикаль важнее набора инструментов', href: 'why.html#vertical' } },
 
     { id: 'product', label: 'Продукт', cols: [
-        { h: 'Платформа Datasulus', links: [
+        { h: 'Платформа Data Sulus', links: [
           { t: 'Обзор платформы', href: 'platform.html', ic: 'layers' },
           { t: 'Коннекторы / Ingestion', href: 'platform.html#ingestion', ic: 'plug' },
           { t: 'Lakehouse-хранилище', href: 'platform.html#storage', ic: 'database' },
@@ -179,7 +179,7 @@
           { t: 'Контакты', href: 'company.html#contact', ic: 'mail' } ] },
         { h: 'Карьера', links: [
           { t: 'Открытые вакансии', href: 'careers.html#jobs', ic: 'briefcase' },
-          { t: 'Работа в Datasulus', href: 'careers.html#culture', ic: 'spark' } ] },
+          { t: 'Работа в Data Sulus', href: 'careers.html#culture', ic: 'spark' } ] },
         { h: 'Пресса и доверие', links: [
           { t: 'Новости и награды', href: 'company.html#press', ic: 'flag' },
           { t: 'Безопасность и доверие', href: 'platform.html#security', ic: 'shield' } ] }
@@ -205,8 +205,8 @@
         ['О нас', 'company.html#mission'], ['Команда', 'company.html#leadership'],
         ['Клиенты', 'customers.html'], ['Карьера', 'careers.html'],
         ['Пресса', 'company.html#press'], ['Контакты', 'company.html#contact'] ] },
-      { h: 'Почему Datasulus', links: [
-        ['Почему Datasulus', 'why.html'], ['Для CEO', 'why.html#for-ceo'],
+      { h: 'Почему Data Sulus', links: [
+        ['Почему Data Sulus', 'why.html'], ['Для CEO', 'why.html#for-ceo'],
         ['Для дата-команд', 'why.html#for-data'], ['Экосистема', 'company.html#ecosystem'],
         ['Запросить демо', '@demo'] ] }
     ],
@@ -220,15 +220,15 @@
       solutions: 'solutions', customers: 'why', why: 'why',
       resources: 'resources', company: 'about', careers: 'about' },
     crumbs: {
-      platform: [['Datasulus', 'index.html'], ['Платформа', null]],
-      product: [['Datasulus', 'index.html'], ['Продукт', 'platform.html'], ['AI Data Engineer', null]],
-      solutions: [['Datasulus', 'index.html'], ['Решения', null]],
-      pricing: [['Datasulus', 'index.html'], ['Цены', null]],
-      resources: [['Datasulus', 'index.html'], ['Ресурсы', null]],
-      customers: [['Datasulus', 'index.html'], ['Клиенты', null]],
-      why: [['Datasulus', 'index.html'], ['Почему Datasulus', null]],
-      company: [['Datasulus', 'index.html'], ['Компания', null]],
-      careers: [['Datasulus', 'index.html'], ['Компания', 'company.html'], ['Карьера', null]]
+      platform: [['Data Sulus', 'index.html'], ['Платформа', null]],
+      product: [['Data Sulus', 'index.html'], ['Продукт', 'platform.html'], ['AI Data Engineer', null]],
+      solutions: [['Data Sulus', 'index.html'], ['Решения', null]],
+      pricing: [['Data Sulus', 'index.html'], ['Цены', null]],
+      resources: [['Data Sulus', 'index.html'], ['Ресурсы', null]],
+      customers: [['Data Sulus', 'index.html'], ['Клиенты', null]],
+      why: [['Data Sulus', 'index.html'], ['Почему Data Sulus', null]],
+      company: [['Data Sulus', 'index.html'], ['Компания', null]],
+      careers: [['Data Sulus', 'index.html'], ['Компания', 'company.html'], ['Карьера', null]]
     }
   };
 
@@ -242,7 +242,7 @@
   /* ---- 7. Рендер шапки ------------------------------------------------- */
   function renderHeader(active) {
     var topId = ROUTING.pageToTop[active];
-    var promo = '<div class="promo-bar">Datasulus — инфраструктура для AI Agentic Companies.' +
+    var promo = '<div class="promo-bar">Data Sulus — инфраструктура для AI Agentic Companies.' +
       ' <a href="#" data-demo>Запросить демо <span data-icon="arrow"></span></a></div>';
 
     var items = NAV.map(function (it) {
@@ -264,7 +264,7 @@
 
     return promo +
       '<div class="nav">' +
-        '<a class="brand" href="index.html" aria-label="Datasulus — AI Data Lakehouse Platform">' + brandSvg(true) +
+        '<a class="brand" href="index.html" aria-label="Data Sulus — AI Data Lakehouse Platform">' + brandSvg(true) +
           '<small>AI Data Lakehouse</small></a>' +
         '<nav class="nav-top">' + items + '</nav>' +
         '<div class="nav-actions">' +
@@ -322,7 +322,7 @@
       '<div class="footer-bottom">' +
         '<div class="footer-social">' + social + '</div>' +
         '<div class="footer-legal">' + legal + '</div>' +
-        '<div class="footer-copy">© 2026 Datasulus · Прототип v0.3</div>' +
+        '<div class="footer-copy">© 2026 Data Sulus · Прототип v0.3</div>' +
       '</div></div>';
   }
 
@@ -330,7 +330,7 @@
   function renderModals() {
     return '<div class="modal-overlay" id="demoModal">' +
       '<div class="modal"><button class="modal-close" data-close aria-label="Закрыть"><span data-icon="x"></span></button>' +
-        '<h3>Запросить демо</h3><p>Покажем, как Datasulus превращает ваши источники в live-дашборды за 2 часа.</p>' +
+        '<h3>Запросить демо</h3><p>Покажем, как Data Sulus превращает ваши источники в live-дашборды за 2 часа.</p>' +
         '<form id="demoForm">' +
           '<div><label>Имя</label><input type="text" required></div>' +
           '<div><label>Компания</label><input type="text" required></div>' +
