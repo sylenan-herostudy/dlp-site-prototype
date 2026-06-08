@@ -78,21 +78,23 @@
 
   /* ---- 2. Бренд / wordmark --------------------------------------------- */
   // Datasulus wordmark: 3×3 Amber dot grid слева + "Data Sulus" справа.
-  // Inter Bold 700, font-size 24 — крупно и читабельно для display-роли.
+  // Inter Bold 700, font-size 30. Размер подогнан так, чтобы tagline
+  // «AI Data Lakehouse» помещалась под низ точно по ширине wordmark.
   function brandSvg(light) {
     var fill = light ? '#FFFFFF' : '#0B2545';
-    // Dot grid: 3×3, диаметр 4.4, шаг 6.6 → общий размер 17.6×17.6px.
+    // Dot grid: 3×3, диаметр 5, шаг 7.6 → общий размер ~21×21px.
     var dots = '';
-    var step = 6.6;
+    var step = 7.6;
     for (var iy = 0; iy < 3; iy++) {
       for (var ix = 0; ix < 3; ix++) {
-        dots += '<circle cx="' + (ix * step + 2.2) + '" cy="' + (iy * step + 2.2) + '" r="2.2"/>';
+        dots += '<circle cx="' + (ix * step + 2.5) + '" cy="' + (iy * step + 2.5) + '" r="2.5"/>';
       }
     }
-    // viewBox 178×30: grid 18 + gap 12 + wordmark ~140 + padding 8
-    return '<svg viewBox="0 0 178 30" width="156" height="26" role="img" aria-label="Datasulus">' +
-      '<g transform="translate(0, 6)" fill="#FFC53D">' + dots + '</g>' +
-      '<text x="28" y="24" font-family="Inter,-apple-system,sans-serif" font-weight="700" font-size="24" letter-spacing="-.7" fill="' + fill + '">Data Sulus</text>' +
+    // viewBox 210×36: grid 21 + gap 13 + wordmark ~170 + padding 6
+    // Rendered: width=185 height=32 (scale 0.88)
+    return '<svg viewBox="0 0 210 36" width="185" height="32" role="img" aria-label="Datasulus">' +
+      '<g transform="translate(0, 7)" fill="#FFC53D">' + dots + '</g>' +
+      '<text x="34" y="29" font-family="Inter,-apple-system,sans-serif" font-weight="700" font-size="30" letter-spacing="-.9" fill="' + fill + '">Data Sulus</text>' +
     '</svg>';
   }
 
@@ -263,7 +265,7 @@
     return promo +
       '<div class="nav">' +
         '<a class="brand" href="index.html" aria-label="Datasulus — AI Data Lakehouse Platform">' + brandSvg(true) +
-          '<small>AI Data Lakehouse Platform</small></a>' +
+          '<small>AI Data Lakehouse</small></a>' +
         '<nav class="nav-top">' + items + '</nav>' +
         '<div class="nav-actions">' +
           '<span class="lang"><button class="on">RU</button><button>EN</button></span>' +

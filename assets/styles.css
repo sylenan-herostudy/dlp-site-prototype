@@ -108,10 +108,13 @@ p{margin:0 0 1rem}
 .promo-bar a:hover{color:#16d4d4}
 .promo-bar a .ico{width:14px;height:14px}
 .nav{display:flex;align-items:center;gap:28px;height:var(--nav-h);max-width:1320px;margin:0 auto;padding:0 24px}
-.brand{display:inline-flex;flex-direction:column;align-items:flex-start;gap:3px;flex:none;line-height:1}
+.brand{display:inline-flex;flex-direction:column;align-items:flex-start;gap:4px;flex:none;line-height:1}
 .brand svg{display:block}
-.brand small{font-size:9.5px;color:rgba(255,255,255,.48);font-weight:300;letter-spacing:.16em;
-  white-space:nowrap;text-transform:uppercase;padding-left:30px;line-height:1;margin-top:1px}
+/* tagline: подогнан под визуальную ширину текста "Data Sulus" в wordmark
+   (от 34 до ~190 в viewBox → в rendered px = padding-left 30 + width ~135) */
+.brand small{font-size:10px;color:rgba(255,255,255,.5);font-weight:300;letter-spacing:.27em;
+  white-space:nowrap;text-transform:uppercase;padding-left:30px;padding-right:.27em;
+  line-height:1;margin-top:2px}
 .nav-top{display:flex;align-items:stretch;gap:2px;height:100%;flex:1}
 .nav-item{position:relative;display:flex;align-items:center}
 .nav-item>a{display:flex;align-items:center;gap:6px;padding:0 14px;height:100%;font-weight:500;
